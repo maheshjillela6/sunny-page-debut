@@ -1,0 +1,34 @@
+{
+  "_description": "Dragon Fortune HUD — game-specific style overrides only. Positions inherited from shared template.",
+  "template": "icon",
+  "renderer": "react",
+  "imageBasePath": "assets/games/dragon-fortune/images/hud",
+
+  "elements": {
+    "spinButton": {
+      "style": { "glowColor": "#FF4500" }
+    },
+    "jackpotMeter": {
+      "style": { "glowColor": "#FFD700" }
+    },
+    "buyBonus": {
+      "style": { "glowColor": "#00FF00" }
+    },
+    "balance": {
+      "style": { "glowColor": "#FF8C00" }
+    },
+    "bet": {
+      "style": { "glowColor": "#FFD700" }
+    },
+    "win": {
+      "style": { "glowColor": "#FF6B00" }
+    }
+  },
+
+  "regions": {
+    "leftMiddle": {
+      "react": { "left": 65 },
+      "pixi":  { "x": 65 }
+    }
+  }
+}

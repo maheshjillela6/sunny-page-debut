@@ -1,0 +1,27 @@
+{
+  "id": "transformation",
+  "name": "Transformation",
+  "maxIterations": 10,
+  "initialIterations": 5,
+  "resetCondition": {
+    "type": "never",
+    "resetTo": 0
+  },
+  "completionCondition": {
+    "type": "fixedCount",
+    "count": 5
+  },
+  "baseMultiplier": 1,
+  "upgradePaths": [
+    { "from": "F", "to": "E", "condition": "winParticipation" },
+    { "from": "E", "to": "D", "condition": "winParticipation" },
+    { "from": "D", "to": "C", "condition": "adjacentMatch" },
+    { "from": "C", "to": "B", "condition": "adjacentMatch" },
+    { "from": "B", "to": "A", "condition": "stepBased" }
+  ],
+  "permanentTransforms": true,
+  "speedVariants": {
+    "turbo": { "maxIterations": 10 },
+    "instant": { "maxIterations": 10 }
+  }
+}

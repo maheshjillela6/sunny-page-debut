@@ -1,0 +1,35 @@
+{
+  "enabled": true,
+  "logo": {
+    "x": 70,
+    "y": 40,
+    "bgFill": "#d4af37",
+    "bgFillAlpha": 0.2,
+    "bgRadius": 26,
+    "ringStroke": "#d4af37",
+    "ringStrokeWidth": 2,
+    "ringRadius": 26,
+    "hexFill": "#d4af37",
+    "hexFillAlpha": 0.8,
+    "hexRadius": 16
+  },
+  "titleBar": {
+    "fill": "#1a1a0f",
+    "fillAlpha": 0.85,
+    "stroke": "#d4af37",
+    "strokeWidth": 2,
+    "strokeAlpha": 0.5,
+    "radius": 24,
+    "width": 420,
+    "height": 52,
+    "y": 14
+  },
+  "titleText": {
+    "fontFamily": "Arial",
+    "fontSize": 28,
+    "fontWeight": "bold",
+    "fill": "#f5e6b8",
+    "letterSpacing": 3,
+    "defaultText": "EGYPTIAN ADVENTURE"
+  }
+}

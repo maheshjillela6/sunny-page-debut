@@ -1,0 +1,136 @@
+{
+  "description": "Dragon's Fortune — fiery red/gold theme with ember animations and dual-grid rendering.",
+  "defaultComposition": {
+    "layers": [
+      {
+        "id": "glow_bg",
+        "type": "graphics",
+        "zIndex": 0,
+        "graphics": { "shape": "roundRect", "fill": "#2a0a0a", "fillAlpha": 1, "cornerRadius": 10 },
+        "states": {
+          "idle": { "visible": true, "static": true },
+          "spinning": { "visible": true, "static": true },
+          "landing": { "visible": true, "static": true },
+          "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 16098816, "loop": true, "strength": 8 } },
+          "big_win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 16750848, "loop": true, "strength": 14 } },
+          "anticipation": { "visible": true, "static": true }
+        },
+        "defaultState": { "visible": true, "static": true }
+      },
+      {
+        "id": "main",
+        "type": "sprite",
+        "zIndex": 1,
+        "frameName": "{symbolId}",
+        "states": {
+          "idle": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "pulse", "scale": 1.02, "duration": 2.5, "loop": true } },
+          "spinning": { "visible": true, "static": true, "animationDriver": "none" },
+          "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "landBounce", "duration": 0.4, "distance": 12 } },
+          "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winZoomRotate", "duration": 0.85, "scale": 1.15, "angle": 0.05 } },
+          "big_win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winZoomRotateSpecial", "duration": 1.1, "scale": 1.25, "angle": 0.08 } },
+          "anticipation": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "pulse", "scale": 1.08, "loop": true } }
+        }
+      }
+    ]
+  },
+  "symbols": {
+    "WILD": {
+      "symbolId": "WILD",
+      "layers": [
+        {
+          "id": "bg_shape",
+          "type": "graphics",
+          "zIndex": 0,
+          "graphics": { "shape": "roundRect", "fill": "#3d1400", "fillAlpha": 0.9, "cornerRadius": 14 },
+          "states": {
+            "idle": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 16750848, "strength": 3, "duration": 3.0, "loop": true } },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 16750848, "strength": 6, "duration": 0.5 } },
+            "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 16750848, "loop": true, "strength": 14 } },
+            "big_win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 16776960, "loop": true, "strength": 20 } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        },
+        {
+          "id": "spine_fg",
+          "type": "spine",
+          "zIndex": 1,
+          "assetKey": "symbol_wild",
+          "states": {
+            "idle": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "symbol_wild", "animationName": "dragon_idle", "loop": true } },
+            "spinning": { "visible": false },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "landBounceSpecial", "duration": 0.5, "distance": 18 } },
+            "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winZoomRotateSpecial", "duration": 1.1, "scale": 1.22, "angle": 0.1 } },
+            "big_win": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "symbol_wild", "animationName": "dragon_bigwin", "loop": false } },
+            "anticipation": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "symbol_wild", "animationName": "dragon_anticipation", "loop": true } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        }
+      ],
+      "highlight": { "color": 16750848, "alpha": 0.4, "padding": 8, "cornerRadius": 14, "useGlow": true }
+    },
+    "SCATTER": {
+      "symbolId": "SCATTER",
+      "layers": [
+        {
+          "id": "bg_shape",
+          "type": "graphics",
+          "zIndex": 0,
+          "graphics": { "shape": "roundRect", "fill": "#400a0a", "fillAlpha": 0.85, "cornerRadius": 12 },
+          "states": {
+            "idle": { "visible": true, "static": true },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 14423100, "strength": 6, "duration": 0.45 } },
+            "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 14423100, "loop": true, "strength": 16 } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        },
+        {
+          "id": "main_sprite",
+          "type": "sprite",
+          "zIndex": 1,
+          "frameName": "SCATTER",
+          "states": {
+            "idle": { "visible": true, "static": true },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "landBounceSpecial", "duration": 0.5, "distance": 16 } },
+            "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winZoomRotateSpecial", "duration": 1.0, "scale": 1.18, "angle": 0.07 } },
+            "anticipation": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "pulse", "scale": 1.1, "loop": true } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        }
+      ]
+    },
+    "LINK": {
+      "symbolId": "LINK",
+      "layers": [
+        {
+          "id": "bg_shape",
+          "type": "graphics",
+          "zIndex": 0,
+          "graphics": { "shape": "roundRect", "fill": "#1a0a3d", "fillAlpha": 0.9, "cornerRadius": 12 },
+          "states": {
+            "idle": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 11141375, "strength": 4, "duration": 2.0, "loop": true } },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 11141375, "strength": 8, "duration": 0.4 } },
+            "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glowPulse", "color": 11141375, "loop": true, "strength": 16 } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        },
+        {
+          "id": "main_sprite",
+          "type": "sprite",
+          "zIndex": 1,
+          "frameName": "LINK",
+          "states": {
+            "idle": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "pulse", "scale": 1.04, "duration": 1.5, "loop": true } },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "landBounce", "duration": 0.4, "distance": 10 } },
+            "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winZoomRotate", "duration": 0.9, "scale": 1.2, "angle": 0.06 } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        }
+      ]
+    }
+  }
+}

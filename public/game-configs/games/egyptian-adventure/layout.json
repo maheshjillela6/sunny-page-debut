@@ -1,0 +1,55 @@
+{
+  "virtualWidth": 1280,
+  "virtualHeight": 720,
+
+  "grid": {
+    "x": 295,
+    "y": 135,
+    "cols": 5,
+    "rows": 3,
+    "cellWidth": 120,
+    "cellHeight": 120,
+    "spacing": 8
+  },
+
+  "hud": {
+    "topBar": {
+      "height": 70,
+      "elements": [
+        { "id": "logo", "x": 20, "y": 10, "width": 220, "height": 50 },
+        { "id": "menuButton", "x": 1190, "y": 15, "width": 70, "height": 40 }
+      ]
+    },
+    "bottomBar": {
+      "height": 110,
+      "elements": [
+        { "id": "balance", "x": 40, "y": 630, "width": 200, "height": 70 },
+        { "id": "bet", "x": 260, "y": 630, "width": 140, "height": 70 },
+        { "id": "spinButton", "x": 580, "y": 605, "width": 120, "height": 120 },
+        { "id": "win", "x": 880, "y": 630, "width": 180, "height": 70 },
+        { "id": "autoplay", "x": 1080, "y": 630, "width": 100, "height": 70 },
+        { "id": "turbo", "x": 1190, "y": 630, "width": 70, "height": 70 }
+      ]
+    }
+  },
+
+  "layers": {
+    "background": { "zIndex": 0 },
+    "decorBack": { "zIndex": 10 },
+    "title": { "zIndex": 20 },
+    "screen": { "zIndex": 100 },
+    "win": { "zIndex": 200 },
+    "feature": { "zIndex": 300 },
+    "presentation": { "zIndex": 400 },
+    "transition": { "zIndex": 500 },
+    "toast": { "zIndex": 600 },
+    "overlay": { "zIndex": 700 },
+    "debug": { "zIndex": 1000 }
+  },
+
+  "decorations": [
+    { "id": "leftPillar", "x": 0, "y": 100, "width": 80, "height": 500, "texture": "pillar_left" },
+    { "id": "rightPillar", "x": 1200, "y": 100, "width": 80, "height": 500, "texture": "pillar_right" },
+    { "id": "topBanner", "x": 400, "y": 0, "width": 480, "height": 60, "texture": "hieroglyph_banner" }
+  ]
+}

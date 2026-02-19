@@ -1,0 +1,104 @@
+{
+  "enabled": true,
+  "type": "code",
+  "code": {
+    "background": {
+      "activeVariant": "neon",
+      "variants": {
+        "neon": {
+          "fill": "#0a0e1a",
+          "fillAlpha": 0.85,
+          "radius": 10,
+          "inset": 12
+        }
+      }
+    },
+    "frameBorder": {
+      "activeVariant": "neon",
+      "variants": {
+        "neon": {
+          "stroke": "#3b82f6",
+          "strokeWidth": 2,
+          "strokeAlpha": 0.9,
+          "radius": 10,
+          "margin": 2,
+          "inner": {
+            "stroke": "#8b5cf6",
+            "strokeWidth": 1,
+            "strokeAlpha": 0.4,
+            "radius": 8,
+            "margin": 4
+          }
+        }
+      },
+      "animations": {
+        "win": [
+          { "property": "alpha", "from": 0.5, "to": 1, "durationMs": 400, "loop": true, "yoyo": true, "ease": "sine.inOut" },
+          { "property": "scaleX", "from": 1, "to": 1.015, "durationMs": 600, "loop": true, "yoyo": true, "ease": "sine.inOut" },
+          { "property": "scaleY", "from": 1, "to": 1.015, "durationMs": 600, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+        ],
+        "spin": [
+          { "property": "alpha", "from": 1, "to": 0.3, "durationMs": 250, "ease": "power2.out" },
+          { "property": "alpha", "from": 0.3, "to": 0.7, "durationMs": 500, "delay": 250, "ease": "sine.inOut" }
+        ]
+      }
+    },
+    "columnSeparator": {
+      "activeVariant": "glow",
+      "variants": {
+        "glow": {
+          "stroke": "#3b82f6",
+          "strokeWidth": 1,
+          "strokeAlpha": 0.15,
+          "paddingY": 6
+        }
+      },
+      "animations": {
+        "idle": [
+          { "property": "alpha", "from": 0.4, "to": 1, "durationMs": 2000, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+        ]
+      }
+    },
+    "rowSeparator": {
+      "activeVariant": "glow",
+      "variants": {
+        "glow": {
+          "stroke": "#8b5cf6",
+          "strokeWidth": 1,
+          "strokeAlpha": 0.1,
+          "paddingX": 6
+        }
+      },
+      "animations": {
+        "idle": [
+          { "property": "alpha", "from": 0.4, "to": 1, "durationMs": 2500, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+        ]
+      }
+    },
+    "effect": {
+      "enabled": true,
+      "activeVariant": "glow",
+      "variants": {
+        "glow": {
+          "type": "glow",
+          "color": "#3b82f6",
+          "alpha": 0.08,
+          "blur": 15
+        }
+      }
+    },
+    "animation": {
+      "enabled": true,
+      "activeVariant": "pulse",
+      "variants": {
+        "pulse": {
+          "type": "pulse",
+          "color": "#3b82f6",
+          "alpha": 0.2,
+          "durationMs": 3000,
+          "loop": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "_description": "Shared HUD template: IMAGE mode — game-specific images with automatic icon fallback",
+  "layoutMode": "image",
+  "imageFallback": true,
+  "imageBasePath": "",
+
+  "elements": {
+    "balance": {
+      "id": "balance", "label": "Balance", "icon": "Wallet", "image": "balance.png",
+      "visible": true, "order": 1, "region": "bottomBar",
+      "style": { "fontSize": 18, "fontWeight": "bold", "labelFontSize": 12, "iconSize": 24, "borderRadius": 8, "padding": [8, 16], "opacity": 0.95, "backdrop": false }
+    },
+    "bet": {
+      "id": "bet", "label": "Bet", "icon": "Coins", "image": "bet.png",
+      "visible": true, "order": 2, "region": "bottomBar", "showControls": true,
+      "style": { "fontSize": 18, "fontWeight": "bold", "labelFontSize": 12, "iconSize": 24, "borderRadius": 8, "padding": [8, 16], "opacity": 0.95, "backdrop": false }
+    },
+    "spinButton": {
+      "id": "spinButton", "label": "SPIN", "icon": "Play", "image": "spin.png", "spinningImage": "spin-active.png",
+      "visible": true, "order": 3, "region": "bottomCenter",
+      "style": { "width": 120, "height": 120, "borderRadius": 9999, "fontSize": 18, "iconSize": 48, "glowColor": "primary" }
+    },
+    "win": {
+      "id": "win", "label": "Win", "icon": "Trophy", "image": "win.png",
+      "visible": true, "order": 4, "region": "bottomBar",
+      "style": { "fontSize": 18, "fontWeight": "bold", "labelFontSize": 12, "iconSize": 24, "borderRadius": 8, "padding": [8, 16], "opacity": 0.95, "backdrop": false }
+    },
+    "autoplay": {
+      "id": "autoplay", "label": "Auto", "icon": "RotateCcw", "image": "autoplay.png",
+      "visible": true, "order": 5, "region": "bottomBar",
+      "style": { "fontSize": 12, "iconSize": 24, "borderRadius": 8, "padding": [6, 12], "backdrop": false }
+    },
+    "turbo": {
+      "id": "turbo", "label": "Turbo", "icon": "Zap", "image": "turbo.png",
+      "visible": true, "order": 6, "region": "bottomBar",
+      "style": { "fontSize": 12, "iconSize": 24, "borderRadius": 8, "padding": [6, 12], "backdrop": false }
+    },
+    "multiplier": {
+      "id": "multiplier", "label": "Multi", "icon": "Zap", "image": "multiplier.png",
+      "visible": false, "order": 7, "region": "topBar",
+      "style": { "fontSize": 16, "fontWeight": "bold", "iconSize": 24, "borderRadius": 8, "padding": [6, 12], "backdrop": false }
+    },
+    "menu": {
+      "id": "menu", "label": "", "icon": "Menu", "image": "menu.png",
+      "visible": true, "order": 1, "region": "topRight",
+      "style": { "width": 44, "height": 44, "iconSize": 28, "borderRadius": 8 }
+    },
+    "exit": {
+      "id": "exit", "label": "", "icon": "ArrowLeft", "image": "exit.png",
+      "visible": true, "order": 0, "region": "topLeft",
+      "style": { "width": 44, "height": 44, "iconSize": 28, "borderRadius": 8 }
+    },
+    "gameTitle": {
+      "id": "gameTitle", "visible": true, "order": 1, "region": "topLeft",
+      "style": { "fontSize": 18, "fontWeight": "bold" }
+    },
+    "featureLabel": {
+      "id": "featureLabel", "visible": true, "order": 2, "region": "topLeft",
+      "style": { "fontSize": 11, "opacity": 0.7 }
+    },
+    "strategyLabel": {
+      "id": "strategyLabel", "visible": true, "order": 1, "region": "topRight",
+      "style": { "fontSize": 13, "opacity": 0.8 }
+    },
+    "jackpotMeter": {
+      "id": "jackpotMeter", "label": "JACKPOT", "icon": "Crown", "image": "jackpot.png",
+      "visible": true, "order": 1, "region": "topBar",
+      "style": { "width": 200, "height": 44, "fontSize": 18, "fontWeight": "bold", "labelFontSize": 10, "iconSize": 24, "borderRadius": 8, "padding": [6, 16], "opacity": 0.95, "backdrop": false, "glowColor": "#FFD700" }
+    },
+    "buyBonus": {
+      "id": "buyBonus", "label": "BUY BONUS", "icon": "ShoppingCart", "image": "buy-bonus.png",
+      "visible": true, "order": 7, "region": "bottomBar",
+      "style": { "width": 100, "height": 44, "fontSize": 12, "fontWeight": "bold", "iconSize": 24, "borderRadius": 8, "padding": [6, 12], "backdrop": false, "glowColor": "#22C55E" }
+    }
+  },
+
+  "regions": {
+    "topLeft": { "position": "absolute", "top": 16, "left": 16, "flexDirection": "row", "alignItems": "center", "gap": 8 },
+    "topRight": { "position": "absolute", "top": 16, "right": 16, "flexDirection": "row", "alignItems": "center", "gap": 8 },
+    "topBar": { "position": "absolute", "top": 16, "left": "50%", "transform": "translateX(-50%)", "flexDirection": "row", "alignItems": "center", "gap": 12 },
+    "bottomBar": { "position": "absolute", "bottom": 24, "left": 0, "right": 0, "flexDirection": "row", "justifyContent": "space-between", "alignItems": "center", "padding": [0, 16], "gap": 12 },
+    "bottomCenter": { "position": "absolute", "bottom": 100, "left": "50%", "transform": "translateX(-50%)", "flexDirection": "row", "alignItems": "center", "justifyContent": "center" }
+  },
+
+  "responsive": {
+    "desktop": {},
+
+    "landscape": {
+      "regions": {
+        "bottomBar": { "padding": [0, 24], "gap": 16 }
+      }
+    },
+
+    "portrait": {
+      "regions": {
+        "bottomBar": { "gap": 8, "padding": [0, 12] },
+        "bottomCenter": { "bottom": 104 }
+      }
+    },
+
+    "desktop-landscape": {
+      "regions": {
+        "bottomBar": { "padding": [0, 32], "gap": 20 },
+        "bottomCenter": { "bottom": 104 }
+      },
+      "elements": {
+        "spinButton": { "style": { "width": 128, "height": 128, "iconSize": 56 } },
+        "balance": { "style": { "fontSize": 20, "labelFontSize": 13, "iconSize": 28, "padding": [10, 20] } },
+        "bet": { "style": { "fontSize": 20, "labelFontSize": 13, "iconSize": 28, "padding": [10, 20] } },
+        "win": { "style": { "fontSize": 20, "labelFontSize": 13, "iconSize": 28, "padding": [10, 20] } }
+      }
+    },
+
+    "desktop-portrait": {
+      "regions": {
+        "bottomBar": { "padding": [0, 16], "gap": 10 },
+        "bottomCenter": { "bottom": 114 }
+      },
+      "elements": {
+        "spinButton": { "style": { "width": 112, "height": 112, "iconSize": 44 } }
+      }
+    },
+
+    "tablet": {
+      "regions": {
+        "bottomBar": { "padding": [0, 12], "gap": 8 },
+        "bottomCenter": { "bottom": 92 }
+      },
+      "elements": {
+        "spinButton": { "style": { "width": 104, "height": 104, "iconSize": 40 } },
+        "balance": { "style": { "fontSize": 16, "labelFontSize": 11, "iconSize": 20, "padding": [6, 14] } },
+        "bet": { "style": { "fontSize": 16, "labelFontSize": 11, "iconSize": 20, "padding": [6, 14] } },
+        "win": { "style": { "fontSize": 16, "labelFontSize": 11, "iconSize": 20, "padding": [6, 14] } },
+        "gameTitle": { "style": { "fontSize": 16 } },
+        "exit": { "style": { "width": 40, "height": 40, "iconSize": 24 } },
+        "menu": { "style": { "width": 40, "height": 40, "iconSize": 24 } }
+      }
+    },
+
+    "tablet-landscape": {
+      "regions": {
+        "bottomBar": { "padding": [0, 20], "gap": 12 },
+        "bottomCenter": { "bottom": 96 }
+      },
+      "elements": {
+        "spinButton": { "style": { "width": 108, "height": 108, "iconSize": 44 } },
+        "autoplay": { "visible": true },
+        "turbo": { "visible": true }
+      }
+    },
+
+    "tablet-portrait": {
+      "regions": {
+        "bottomBar": { "padding": [0, 10], "gap": 6, "flexWrap": "wrap", "justifyContent": "center" },
+        "bottomCenter": { "bottom": 114 }
+      },
+      "elements": {
+        "spinButton": { "style": { "width": 100, "height": 100, "iconSize": 36 } },
+        "autoplay": { "visible": false },
+        "turbo": { "visible": false },
+        "strategyLabel": { "visible": false }
+      }
+    },
+
+    "mobile": {
+      "regions": {
+        "topLeft": { "top": 8, "left": 8, "gap": 4 },
+        "topRight": { "top": 8, "right": 8, "gap": 4 },
+        "bottomBar": { "bottom": 12, "padding": [0, 8], "gap": 6, "flexWrap": "wrap", "justifyContent": "center" },
+        "bottomCenter": { "bottom": 76 }
+      },
+      "elements": {
+        "spinButton": { "style": { "width": 84, "height": 84, "iconSize": 32, "fontSize": 14 } },
+        "balance": { "style": { "fontSize": 13, "labelFontSize": 9, "iconSize": 16, "padding": [4, 8] } },
+        "bet": { "style": { "fontSize": 13, "labelFontSize": 9, "iconSize": 16, "padding": [4, 8] }, "showControls": false },
+        "win": { "style": { "fontSize": 13, "labelFontSize": 9, "iconSize": 16, "padding": [4, 8] } },
+        "autoplay": { "visible": false },
+        "turbo": { "visible": false },
+        "strategyLabel": { "visible": false },
+        "featureLabel": { "visible": false },
+        "gameTitle": { "style": { "fontSize": 13 } },
+        "exit": { "style": { "width": 36, "height": 36, "iconSize": 20 } },
+        "menu": { "style": { "width": 36, "height": 36, "iconSize": 20 } }
+      }
+    },
+
+    "mobile-landscape": {
+      "regions": {
+        "topLeft": { "top": 6, "left": 6 },
+        "topRight": { "top": 6, "right": 6 },
+        "bottomBar": { "bottom": 8, "padding": [0, 12], "gap": 8, "flexWrap": "nowrap", "justifyContent": "space-between" },
+        "bottomCenter": { "position": "absolute", "bottom": 8, "right": 16, "left": "auto", "transform": "none" }
+      },
+      "elements": {
+        "spinButton": { "style": { "width": 68, "height": 68, "iconSize": 28, "fontSize": 12 } },
+        "balance": { "style": { "fontSize": 12, "labelFontSize": 8, "iconSize": 14, "padding": [3, 6] } },
+        "bet": { "style": { "fontSize": 12, "labelFontSize": 8, "iconSize": 14, "padding": [3, 6] } },
+        "win": { "style": { "fontSize": 12, "labelFontSize": 8, "iconSize": 14, "padding": [3, 6] } },
+        "gameTitle": { "style": { "fontSize": 11 } },
+        "exit": { "style": { "width": 30, "height": 30, "iconSize": 18 } },
+        "menu": { "style": { "width": 30, "height": 30, "iconSize": 18 } }
+      }
+    },
+
+    "mobile-portrait": {
+      "regions": {
+        "topLeft": { "top": 8, "left": 8 },
+        "topRight": { "top": 8, "right": 8 },
+        "bottomBar": { "bottom": 16, "padding": [0, 8], "gap": 4, "flexWrap": "wrap", "justifyContent": "center" },
+        "bottomCenter": { "bottom": 84 }
+      },
+      "elements": {
+        "spinButton": { "style": { "width": 92, "height": 92, "iconSize": 36, "fontSize": 15 } },
+        "balance": { "style": { "fontSize": 14, "labelFontSize": 10, "iconSize": 18, "padding": [5, 10] } },
+        "bet": { "style": { "fontSize": 14, "labelFontSize": 10, "iconSize": 18, "padding": [5, 10] } },
+        "win": { "style": { "fontSize": 14, "labelFontSize": 10, "iconSize": 18, "padding": [5, 10] } },
+        "multiplier": { "visible": false }
+      }
+    }
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "spin": {
+    "baseGame": {
+      "strategy": "top_to_bottom",
+      "anticipation": {
+        "duration": 60,
+        "scale": 0.97,
+        "easing": "easeOutQuad"
+      },
+      "acceleration": {
+        "rate": 130,
+        "curve": "exponential"
+      },
+      "maxSpeed": 30,
+      "deceleration": {
+        "rate": 85,
+        "duration": 380,
+        "curve": "easeOutCubic"
+      },
+      "stagger": {
+        "delay": 90,
+        "pattern": "sequential"
+      },
+      "settle": {
+        "duration": 220,
+        "bounceStrength": 0.35,
+        "bounceCount": 2,
+        "easing": "easeOutBack"
+      },
+      "blur": {
+        "enabled": true,
+        "strength": 0.55
+      }
+    },
+
+    "secondaryGrid": {
+      "strategy": "right_to_left",
+      "anticipation": {
+        "duration": 40,
+        "scale": 0.98,
+        "easing": "easeOutQuad"
+      },
+      "acceleration": {
+        "rate": 100,
+        "curve": "exponential"
+      },
+      "maxSpeed": 24,
+      "deceleration": {
+        "rate": 70,
+        "duration": 300,
+        "curve": "easeOutCubic"
+      },
+      "stagger": {
+        "delay": 70,
+        "pattern": "sequential"
+      },
+      "settle": {
+        "duration": 180,
+        "bounceStrength": 0.25,
+        "bounceCount": 2,
+        "easing": "easeOutBack"
+      },
+      "blur": {
+        "enabled": true,
+        "strength": 0.4
+      }
+    },
+
+    "freeSpins": {
+      "strategy": "top_to_bottom",
+      "anticipation": {
+        "duration": 90,
+        "scale": 0.94,
+        "easing": "easeOutQuad"
+      },
+      "acceleration": {
+        "rate": 160,
+        "curve": "exponential"
+      },
+      "maxSpeed": 35,
+      "deceleration": {
+        "rate": 110,
+        "duration": 420,
+        "curve": "easeOutCubic"
+      },
+      "stagger": {
+        "delay": 60,
+        "pattern": "sequential"
+      },
+      "settle": {
+        "duration": 280,
+        "bounceStrength": 0.45,
+        "bounceCount": 3,
+        "easing": "easeOutBack"
+      },
+      "blur": {
+        "enabled": true,
+        "strength": 0.7
+      }
+    }
+  },
+
+  "symbols": {
+    "landing": {
+      "enabled": true,
+      "bounce": {
+        "strength": 0.15,
+        "duration": 180,
+        "easing": "easeOutBounce"
+      },
+      "glow": {
+        "enabled": true,
+        "color": "#ef4444",
+        "intensity": 0.6,
+        "duration": 250
+      }
+    },
+
+    "win": {
+      "pulse": {
+        "enabled": true,
+        "scale": 1.2,
+        "duration": 450,
+        "repeatCount": 3,
+        "easing": "easeInOutSine"
+      },
+      "glow": {
+        "enabled": true,
+        "color": "#f59e0b",
+        "intensity": 0.9,
+        "pulseDuration": 550
+      },
+      "particle": {
+        "enabled": true,
+        "type": "ember",
+        "count": 14,
+        "duration": 700
+      }
+    },
+
+    "idle": {
+      "enabled": true,
+      "interval": 4000,
+      "type": "subtle_pulse",
+      "scale": 1.03,
+      "duration": 1200
+    },
+
+    "expand": {
+      "duration": 550,
+      "easing": "easeOutBack",
+      "scale": 3.2
+    }
+  },
+
+  "reel": {
+    "blur": {
+      "enabled": true,
+      "strengthMultiplier": 1.1,
+      "fadeInDuration": 120,
+      "fadeOutDuration": 180
+    },
+    "mask": {
+      "enabled": true,
+      "fadeEdges": true,
+      "fadeSize": 24
+    }
+  },
+
+  "wins": {
+    "line": {
+      "draw": {
+        "duration": 350,
+        "easing": "easeOutQuad"
+      },
+      "glow": {
+        "enabled": true,
+        "width": 5,
+        "blur": 10,
+        "color": "#f59e0b"
+      },
+      "cycle": {
+        "delay": 1100,
+        "fadeDuration": 250
+      }
+    },
+
+    "counter": {
+      "duration": 1200,
+      "easing": "easeOutQuad",
+      "pulse": {
+        "enabled": true,
+        "scale": 1.25,
+        "duration": 250
+      }
+    },
+
+    "bigWin": {
+      "entrance": {
+        "type": "zoom_bounce",
+        "duration": 600,
+        "easing": "easeOutBack"
+      },
+      "celebration": {
+        "coinRain": {
+          "enabled": true,
+          "particleCount": 70,
+          "speed": 350,
+          "spread": 250
+        },
+        "flash": {
+          "enabled": true,
+          "color": "#ffffff",
+          "duration": 120,
+          "count": 4
+        },
+        "shake": {
+          "enabled": true,
+          "intensity": 7,
+          "duration": 600
+        }
+      },
+      "exit": {
+        "type": "fade_scale",
+        "duration": 450,
+        "easing": "easeInQuad"
+      }
+    }
+  },
+
+  "transitions": {
+    "featureIntro": {
+      "type": "flame_wipe",
+      "duration": 900,
+      "color": "#dc2626"
+    },
+    "featureOutro": {
+      "type": "fade",
+      "duration": 550,
+      "easing": "easeInOutSine"
+    },
+    "screenChange": {
+      "type": "slide",
+      "duration": 450,
+      "direction": "left",
+      "easing": "easeOutCubic"
+    }
+  },
+
+  "ambient": {
+    "background": {
+      "parallax": {
+        "enabled": true,
+        "layers": 3,
+        "speeds": [0.08, 0.15, 0.25]
+      },
+      "pulse": {
+        "enabled": true,
+        "scale": 1.015,
+        "duration": 5000
+      },
+      "spine": {
+        "enabled": true,
+        "key": "bg_scene",
+        "animation": "Bg",
+        "loop": true,
+        "scale": 1.0,
+        "position": { "x": 0, "y": 0 }
+      }
+    },
+    "particles": {
+      "enabled": true,
+      "type": "floating_embers",
+      "count": 30,
+      "speed": 40,
+      "color": "#ef4444"
+    }
+  }
+}

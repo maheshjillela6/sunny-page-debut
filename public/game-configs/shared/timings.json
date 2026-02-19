@@ -1,0 +1,11 @@
+{
+  "spin.reelStart": 0,
+  "spin.reelStop.stagger": 80,
+  "spin.reelStop.settle": 200,
+  "win.countUp": 1000,
+  "win.paylineLoop.step": 1200,
+  "win.paylineLoop.max": 5000,
+  "feature.enter": 500,
+  "feature.exit": 400,
+  "turbo.speedMultiplier": 2
+}

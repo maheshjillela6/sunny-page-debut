@@ -1,0 +1,27 @@
+{
+  "_description": "Neon Nights HUD — game-specific style overrides only. Positions inherited from shared template.",
+  "template": "icon",
+  "renderer": "react",
+  "imageBasePath": "assets/games/neon-nights/images/hud",
+
+  "elements": {
+    "spinButton": {
+      "style": { "glowColor": "#FF0000" }
+    },
+    "jackpotMeter": {
+      "style": { "glowColor": "#00FFFF" }
+    },
+    "buyBonus": {
+      "style": { "glowColor": "#00FF00" }
+    },
+    "balance": {
+      "style": { "glowColor": "#FF00FF" }
+    },
+    "bet": {
+      "style": { "glowColor": "#FFFF00" }
+    },
+    "win": {
+      "style": { "glowColor": "#FF6B00" }
+    }
+  }
+}

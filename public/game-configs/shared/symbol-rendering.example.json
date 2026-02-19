@@ -1,0 +1,102 @@
+{
+  "description": "Example symbol rendering configuration demonstrating all composition patterns.",
+  "defaultComposition": {
+    "layers": [
+      {
+        "id": "main",
+        "type": "sprite",
+        "zIndex": 1,
+        "frameName": "{symbolId}",
+        "states": {
+          "idle": { "visible": true, "static": true, "animationDriver": "none" },
+          "spinning": { "visible": true, "static": true, "animationDriver": "none" },
+          "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "symbolLand" } },
+          "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winPulse", "loop": true } },
+          "big_win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winPulse", "scale": 1.2, "loop": true } },
+          "anticipation": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "shake", "intensity": 2, "loop": true } }
+        }
+      }
+    ]
+  },
+  "symbols": {
+    "WILD": {
+      "symbolId": "WILD",
+      "layers": [
+        {
+          "id": "bg_shape",
+          "type": "graphics",
+          "zIndex": 0,
+          "graphics": { "shape": "roundRect", "fill": "#1a0033", "fillAlpha": 0.8, "cornerRadius": 12 },
+          "states": {
+            "idle": { "visible": true, "static": true },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": true },
+            "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "glow", "color": 16776960, "loop": true } },
+            "big_win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "scatterGlow", "color": 16776960, "loop": true } },
+            "anticipation": { "visible": true, "static": true }
+          },
+          "defaultState": { "visible": true, "static": true }
+        },
+        {
+          "id": "spine_fg",
+          "type": "spine",
+          "zIndex": 1,
+          "assetKey": "symbol_wild",
+          "states": {
+            "idle": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "symbol_wild", "animationName": "wild_idle", "loop": true } },
+            "spinning": { "visible": false },
+            "landing": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "symbol_wild", "animationName": "wild_land", "loop": false } },
+            "win": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "symbol_wild", "animationName": "wild_lowwin", "loop": true } },
+            "big_win": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "symbol_wild", "animationName": "wild_highwin", "loop": false } },
+            "anticipation": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "symbol_wild", "animationName": "wild_anticipation", "loop": true } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        }
+      ],
+      "highlight": { "color": 16776960, "alpha": 0.3, "padding": 6, "cornerRadius": 14, "useGlow": true }
+    },
+    "SCATTER": {
+      "symbolId": "SCATTER",
+      "layers": [
+        {
+          "id": "main_sprite",
+          "type": "sprite",
+          "zIndex": 0,
+          "frameName": "SCATTER",
+          "states": {
+            "idle": { "visible": true, "static": true },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "bounce", "duration": 0.4 } },
+            "win": { "visible": false, "swapRenderer": true, "swapLayerType": "spine", "swapAssetKey": "symbol_scatter" },
+            "big_win": { "visible": false, "swapRenderer": true, "swapLayerType": "spine", "swapAssetKey": "symbol_scatter" },
+            "anticipation": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "pulse", "loop": true } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        }
+      ]
+    },
+    "STATIC_SYMBOL": {
+      "symbolId": "STATIC_SYMBOL",
+      "layers": [
+        {
+          "id": "bg",
+          "type": "graphics",
+          "zIndex": 0,
+          "graphics": { "shape": "circle", "fill": "#2a2a4a", "fillAlpha": 1 },
+          "states": {},
+          "defaultState": { "visible": true, "static": true, "animationDriver": "none" }
+        },
+        {
+          "id": "icon",
+          "type": "sprite",
+          "zIndex": 1,
+          "frameName": "STATIC_SYMBOL",
+          "scale": 0.8,
+          "states": {},
+          "defaultState": { "visible": true, "static": true, "animationDriver": "none" }
+        }
+      ],
+      "highlight": { "color": 65535, "alpha": 0.5, "padding": 4, "cornerRadius": 60 }
+    }
+  }
+}

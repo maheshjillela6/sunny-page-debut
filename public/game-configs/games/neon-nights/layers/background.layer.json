@@ -1,0 +1,97 @@
+{
+  "base": {
+    "candidates": [
+      { "type": "image", "key": "background", "scaleMode": "cover", "zIndex": 0 },
+      { "type": "spine", "key": "bgambient", "fillScreen": true, "scale": 0.9, "animation": { "name": "Bg", "loop": true }, "zIndex": 1 }
+    ],
+    "fallback": { "type": "graphics", "kind": "solid", "color": "#0f0f23" }
+  },
+  "ambient": {
+    "items": [
+      {
+        "id": "top-left-ambient",
+        "kind": "ambient",
+        "position": { "x": 140, "y": 120, "anchor": { "x": 0.5, "y": 0.5 } },
+        "candidates": [
+          {
+            "type": "graphics",
+            "kind": "starfield",
+            "config": {
+              "count": 18,
+              "area": { "width": 320, "height": 220 },
+              "colors": ["#ff0000"],
+              "radiusMin": 1,
+              "radiusMax": 3,
+              "alphaMin": 0.1,
+              "alphaMax": 0.95,
+              "pulseDurationMs": 1300
+            }
+          }
+        ]
+      },
+      {
+        "id": "top-right-ambient",
+        "kind": "ambient",
+        "position": { "x": 1140, "y": 120, "anchor": { "x": 0.5, "y": 0.5 } },
+        "candidates": [
+          {
+            "type": "graphics",
+            "kind": "starfield",
+            "config": {
+              "count": 18,
+              "area": { "width": 320, "height": 220 },
+              "colors": ["#ff0000"],
+              "radiusMin": 1,
+              "radiusMax": 3,
+              "alphaMin": 0.1,
+              "alphaMax": 0.95,
+              "pulseDurationMs": 1300
+            }
+          }
+        ]
+      },
+      {
+        "id": "starfield-left",
+        "kind": "decorative",
+        "position": { "x": 220, "y": 190, "anchor": { "x": 0.5, "y": 0.5 } },
+        "candidates": [
+          {
+            "type": "graphics",
+            "kind": "starfield",
+            "config": {
+              "count": 34,
+              "area": { "width": 520, "height": 320 },
+              "colors": ["#ffffff"],
+              "radiusMin": 1,
+              "radiusMax": 3,
+              "alphaMin": 0.15,
+              "alphaMax": 0.95,
+              "pulseDurationMs": 1200
+            }
+          }
+        ]
+      },
+      {
+        "id": "starfield-right",
+        "kind": "decorative",
+        "position": { "x": 1060, "y": 190, "anchor": { "x": 0.5, "y": 0.5 } },
+        "candidates": [
+          {
+            "type": "graphics",
+            "kind": "starfield",
+            "config": {
+              "count": 34,
+              "area": { "width": 520, "height": 320 },
+              "colors": ["#ffffff"],
+              "radiusMin": 1,
+              "radiusMax": 3,
+              "alphaMin": 0.15,
+              "alphaMax": 0.95,
+              "pulseDurationMs": 1200
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

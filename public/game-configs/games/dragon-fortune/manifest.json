@@ -1,0 +1,129 @@
+{
+  "id": "dragon-fortune",
+  "name": "Dragon's Fortune",
+  "version": "1.0.0",
+  "description": "A mythical dual-grid slot with a main 4x5 arena and a bonus 3x3 side grid",
+
+  "type": "SLOT",
+  "mechanic": "dualboard",
+  "volatility": "high",
+
+ 
+
+  "paylines": {
+    "type": "lines",
+    "count": 25,
+    "minMatch": 3,
+    "definitions": [
+      [0, 1, 2, 3, 4],
+      [5, 6, 7, 8, 9],
+      [10, 11, 12, 13, 14],
+      [15, 16, 17, 18, 19],
+      [0, 6, 12, 8, 4],
+      [15, 11, 7, 3, 4],
+      [0, 1, 7, 13, 14],
+      [15, 16, 12, 8, 9],
+      [5, 1, 2, 3, 9],
+      [10, 11, 7, 8, 14],
+      [0, 6, 7, 8, 4],
+      [15, 11, 12, 13, 19],
+      [5, 1, 7, 13, 9],
+      [10, 16, 12, 8, 14],
+      [0, 6, 2, 8, 4],
+      [15, 11, 7, 3, 19],
+      [5, 6, 12, 8, 9],
+      [10, 11, 7, 8, 14],
+      [0, 1, 2, 8, 14],
+      [15, 16, 17, 13, 9],
+      [10, 6, 2, 3, 4],
+      [5, 11, 17, 13, 9],
+      [0, 6, 12, 18, 14],
+      [15, 11, 7, 3, 4],
+      [10, 6, 7, 8, 14]
+    ]
+  },
+
+  "rtp": {
+    "base": 96.2,
+    "withFeatures": 97.0
+  },
+
+  "maxWinXBet": 15000,
+
+  "features": {
+    "available": ["FREE_SPINS", "MULTIPLIERS", "EXPANDING_WILDS", "DUAL_GRID_SYNC"],
+    "spinMechanisms": ["cascade"],
+    "baseGame": {
+      "primaryGrid": {
+        "spinStrategy": "top_to_bottom",
+        "spinConfig": {
+          "maxSpeed": 28,
+          "acceleration": 110,
+          "deceleration": 75,
+          "bounceStrength": 0.3,
+          "staggerDelay": 90
+        }
+      },
+      "secondaryGrid": {
+        "spinStrategy": "right_to_left",
+        "spinConfig": {
+          "maxSpeed": 22,
+          "acceleration": 90,
+          "deceleration": 60,
+          "bounceStrength": 0.2,
+          "staggerDelay": 70
+        }
+      }
+    },
+    "freeSpins": {
+      "triggerSymbol": "SCATTER",
+      "triggerCount": 3,
+      "initialSpins": 12,
+      "retriggerSpins": 5,
+      "expandingWildsEnabled": true
+    },
+    "multipliers": {
+      "enabled": true,
+      "cascadeIncrement": 1,
+      "maxMultiplier": 12
+    },
+    "dualGridSync": {
+      "enabled": true,
+      "syncWilds": true,
+      "syncMultipliers": false,
+      "bonusLinkTrigger": "LINK"
+    }
+  },
+
+  "symbols": {
+    "high": ["DRAGON", "PHOENIX", "TIGER"],
+    "low": ["JADE", "COIN", "SCROLL"],
+    "special": ["WILD", "SCATTER", "LINK"]
+  },
+
+  "theme": {
+    "primaryColor": "#dc2626",
+    "secondaryColor": "#b91c1c",
+    "accentColor": "#f59e0b",
+    "backgroundColor": "#1a0a0a",
+    "glowColor": "#ef4444"
+  },
+
+  "loading": {
+    "requiredBundles": ["core", "symbols", "spine", "background"],
+    "deferredBundles": ["audio", "effects", "ui", "fonts"],
+    "assetLoadBehavior": "useDefaults",
+    "showErrorOnFailure": false,
+    "maxRetries": 2
+  },
+
+  "configFiles": {
+    "layout": "layout.json",
+    "responsive": "responsive.json",
+    "symbols": "symbol-map.json",
+    "assets": "assets.json",
+    "animation": "animation.json",
+    "audio": "audio.json",
+    "cascade": "cascade.config.json"
+  }
+}

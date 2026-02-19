@@ -1,0 +1,198 @@
+{
+  "_description": "Shared HUD template: ICON mode — dual renderer positions. React uses CSS-like (top/bottom/left/right), Pixi uses direct x/y. Virtual canvas: 1280×720 (landscape) / 720×1280 (portrait).",
+  "layoutMode": "icon",
+  "imageFallback": false,
+  "imageBasePath": "",
+
+  "elements": {
+    "balance": {
+      "id": "balance", "label": "Balance", "icon": "Wallet",
+      "visible": true, "order": 1, "region": "bottomBar",
+      "style": { "width": 140, "height": 50, "fontSize": 14, "fontWeight": "bold", "labelFontSize": 10, "iconSize": 24, "borderRadius": 8, "padding": [8, 12], "opacity": 0.9, "backdrop": true }
+    },
+    "bet": {
+      "id": "bet", "label": "Bet", "icon": "Coins",
+      "visible": true, "order": 2, "region": "bottomBar", "showControls": true,
+      "style": { "width": 140, "height": 50, "fontSize": 14, "fontWeight": "bold", "labelFontSize": 10, "iconSize": 24, "borderRadius": 8, "padding": [8, 12], "opacity": 0.9, "backdrop": true }
+    },
+    "win": {
+      "id": "win", "label": "Win", "icon": "Trophy",
+      "visible": true, "order": 3, "region": "bottomBar",
+      "style": { "width": 140, "height": 50, "fontSize": 14, "fontWeight": "bold", "labelFontSize": 10, "iconSize": 24, "borderRadius": 8, "padding": [8, 12], "opacity": 0.9, "backdrop": true }
+    },
+    "spinButton": {
+      "id": "spinButton", "label": "SPIN", "icon": "Play",
+      "visible": true, "order": 10, "region": "bottomRight",
+      "style": { "width": 100, "height": 100, "borderRadius": 12, "fontSize": 14, "iconSize": 48, "opacity": 0.95, "padding": [8, 8], "glowColor": "primary" }
+    },
+    "autoplay": {
+      "id": "autoplay", "label": "Auto", "icon": "RotateCcw",
+      "visible": true, "order": 5, "region": "bottomBar",
+      "style": { "fontSize": 12, "iconSize": 16, "borderRadius": 8, "padding": [6, 12], "backdrop": true }
+    },
+    "turbo": {
+      "id": "turbo", "label": "Turbo", "icon": "Zap",
+      "visible": true, "order": 4, "region": "bottomRight",
+      "style": { "fontSize": 12, "iconSize": 20, "borderRadius": 8, "padding": [6, 10], "backdrop": true }
+    },
+    "multiplier": {
+      "id": "multiplier", "label": "Multi", "icon": "Zap",
+      "visible": false, "order": 7, "region": "topBar",
+      "style": { "fontSize": 16, "fontWeight": "bold", "iconSize": 16, "borderRadius": 8, "padding": [6, 12], "backdrop": true }
+    },
+    "menu": {
+      "id": "menu", "label": "", "icon": "Menu",
+      "visible": true, "order": 1, "region": "topRight",
+      "style": { "width": 40, "height": 40, "iconSize": 20, "borderRadius": 8 }
+    },
+    "exit": {
+      "id": "exit", "label": "", "icon": "ArrowLeft",
+      "visible": true, "order": 0, "region": "topLeft",
+      "style": { "width": 40, "height": 40, "iconSize": 20, "borderRadius": 8 }
+    },
+    "gameTitle": {
+      "id": "gameTitle", "visible": true, "order": 1, "region": "topLeft",
+      "style": { "fontSize": 18, "fontWeight": "bold" }
+    },
+    "featureLabel": {
+      "id": "featureLabel", "visible": true, "order": 2, "region": "topLeft",
+      "style": { "fontSize": 11, "opacity": 0.7 }
+    },
+    "strategyLabel": {
+      "id": "strategyLabel", "visible": true, "order": 1, "region": "topRight",
+      "style": { "fontSize": 13, "opacity": 0.8 }
+    },
+    "jackpotMeter": {
+      "id": "jackpotMeter", "label": "JACKPOT", "icon": "Crown",
+      "visible": true, "order": 1, "region": "leftMiddle",
+      "style": { "width": 120, "height": 50, "fontSize": 14, "fontWeight": "bold", "labelFontSize": 10, "iconSize": 22, "borderRadius": 8, "padding": [6, 12], "opacity": 0.9, "backdrop": true, "glowColor": "#FFD700" }
+    },
+    "buyBonus": {
+      "id": "buyBonus", "label": "BUY BONUS", "icon": "ShoppingCart",
+      "visible": true, "order": 1, "region": "rightMiddle",
+      "style": { "width": 90, "height": 65, "fontSize": 12, "fontWeight": "bold", "iconSize": 20, "borderRadius": 8, "padding": [6, 10], "opacity": 0.9, "backdrop": true, "glowColor": "#22C55E" }
+    }
+  },
+
+  "_comment_regions": "Each region has 'react' (CSS-like) and 'pixi' (x/y with anchor) positions. Virtual canvas: 1280×720.",
+
+  "regions": {
+    "topLeft": {
+      "react": { "position": "absolute", "top": 16, "left": 16, "flexDirection": "row", "alignItems": "center", "gap": 8 },
+      "pixi":  { "x": 16, "y": 16, "flexDirection": "row", "alignItems": "center", "gap": 8 }
+    },
+    "topRight": {
+      "react": { "position": "absolute", "top": 16, "right": 16, "flexDirection": "row", "alignItems": "center", "gap": 8 },
+      "pixi":  { "x": 1264, "y": 16, "anchorX": 1, "flexDirection": "row", "alignItems": "center", "gap": 8 }
+    },
+    "topBar": {
+      "react": { "position": "absolute", "top": 16, "left": "50%", "transform": "translateX(-50%)", "flexDirection": "row", "alignItems": "center", "gap": 12 },
+      "pixi":  { "x": 640, "y": 16, "anchorX": 0.5, "flexDirection": "row", "alignItems": "center", "gap": 12 }
+    },
+    "bottomBar": {
+      "react": { "position": "absolute", "bottom": 24, "left": 0, "right": 0, "flexDirection": "row", "justifyContent": "space-between", "alignItems": "center", "padding": [0, 16], "gap": 12 },
+      "pixi":  { "x": 16, "y": 646, "flexDirection": "row", "alignItems": "center", "gap": 12 }
+    },
+    "bottomRight": {
+      "react": { "position": "absolute", "bottom": 20, "right": 20, "flexDirection": "row", "alignItems": "center", "gap": 10 },
+      "pixi":  { "x": 1260, "y": 600, "anchorX": 1, "flexDirection": "row", "alignItems": "center", "gap": 10 }
+    },
+    "bottomCenter": {
+      "react": { "position": "absolute", "bottom": 96, "left": "50%", "transform": "translateX(-50%)", "flexDirection": "row", "alignItems": "center", "justifyContent": "center" },
+      "pixi":  { "x": 640, "y": 624, "anchorX": 0.5, "flexDirection": "row", "alignItems": "center", "gap": 0 }
+    },
+    "leftMiddle": {
+      "react": { "position": "absolute", "left": 106, "top": "50%", "transform": "translateY(-50%)", "flexDirection": "column", "alignItems": "center", "gap": 8 },
+      "pixi":  { "x": 106, "y": 360, "anchorY": 0.5, "flexDirection": "column", "alignItems": "center", "gap": 8 }
+    },
+    "rightMiddle": {
+      "react": { "position": "absolute", "right": 106, "top": "50%", "transform": "translateY(-50%)", "flexDirection": "column", "alignItems": "center", "gap": 8 },
+      "pixi":  { "x": 1174, "y": 360, "anchorX": 1, "anchorY": 0.5, "flexDirection": "column", "alignItems": "center", "gap": 8 }
+    }
+  },
+
+  "responsive": {
+    "portrait": {
+      "_comment": "Positions in the 720×1280 virtual canvas.",
+      "regions": {
+        "topLeft": {
+          "react": { "top": 24, "left": 16 },
+          "pixi":  { "x": 16, "y": 24 }
+        },
+        "topRight": {
+          "react": { "top": 24, "right": 16 },
+          "pixi":  { "x": 704, "y": 24 }
+        },
+        "topBar": {
+          "react": { "top": 24 },
+          "pixi":  { "x": 360, "y": 24 }
+        },
+        "bottomBar": {
+          "react": { "bottom": 48, "padding": [0, 16], "gap": 12 },
+          "pixi":  { "x": 16, "y": 1182, "gap": 12 }
+        },
+        "bottomRight": {
+          "react": { "bottom": 48, "right": 20 },
+          "pixi":  { "x": 700, "y": 1132 }
+        },
+        "bottomCenter": {
+          "react": { "bottom": 180 },
+          "pixi":  { "x": 360, "y": 1100 }
+        },
+        "leftMiddle": {
+          "react": { "top": "auto", "left": "50%", "bottom": 320, "transform": "translateX(-50%)", "flexDirection": "row", "gap": 12 },
+          "pixi":  { "x": 360, "y": 960, "anchorX": 0.5, "anchorY": 0, "flexDirection": "row", "gap": 12 }
+        },
+        "rightMiddle": {
+          "react": { "top": "auto", "right": "auto", "left": "50%", "bottom": 250, "transform": "translateX(-50%)", "flexDirection": "row", "gap": 12 },
+          "pixi":  { "x": 360, "y": 1030, "anchorX": 0.5, "anchorY": 0, "flexDirection": "row", "gap": 12 }
+        }
+      }
+    },
+
+    "mobile": {
+      "_comment": "Visibility-only overrides for mobile.",
+      "elements": {
+        "autoplay":      { "visible": false },
+        "turbo":         { "visible": false },
+        "strategyLabel": { "visible": false },
+        "featureLabel":  { "visible": false }
+      }
+    },
+
+    "mobile-landscape": {
+      "regions": {
+        "bottomBar": {
+          "react": { "bottom": 12, "padding": [0, 16], "gap": 8 },
+          "pixi":  { "x": 16, "y": 658, "gap": 8 }
+        },
+        "bottomRight": {
+          "react": { "bottom": 12, "right": 20 },
+          "pixi":  { "x": 1260, "y": 608 }
+        },
+        "bottomCenter": {
+          "react": { "bottom": 12, "right": 24, "left": "auto", "transform": "none" },
+          "pixi":  { "x": 1256, "y": 608, "anchorX": 1 }
+        }
+      },
+      "elements": {
+        "autoplay": { "visible": false },
+        "turbo":    { "visible": false }
+      }
+    },
+
+    "mobile-portrait": {
+      "elements": {
+        "multiplier": { "visible": false }
+      }
+    },
+
+    "tablet-portrait": {
+      "elements": {
+        "autoplay":      { "visible": false },
+        "turbo":         { "visible": false },
+        "strategyLabel": { "visible": false }
+      }
+    }
+  }
+}

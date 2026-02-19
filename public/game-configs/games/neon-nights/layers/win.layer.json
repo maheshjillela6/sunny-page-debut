@@ -1,0 +1,50 @@
+{
+  "particles": {
+    "bigWinThreshold": 100,
+    "megaWinThreshold": 500,
+
+    "lineWinBurst": {
+      "count": 28,
+      "colors": ["#ffffff", "#fbbf24", "#06b6d4"],
+      "radiusMin": 2,
+      "radiusMax": 5,
+      "spreadX": 160,
+      "spreadY": 55,
+      "riseY": 120,
+      "durationMs": 650,
+      "alphaMin": 0.45,
+      "alphaMax": 0.95
+    },
+
+    "bigWinBurst": {
+      "count": 70,
+      "colors": ["#fbbf24", "#06b6d4", "#8b5cf6"],
+      "radiusMin": 2,
+      "radiusMax": 6,
+      "spreadX": 260,
+      "spreadY": 80,
+      "riseY": 220,
+      "durationMs": 900
+    },
+    "megaWinBurst": {
+      "count": 120,
+      "colors": ["#fbbf24", "#ffffff", "#c084fc", "#06b6d4"],
+      "radiusMin": 2,
+      "radiusMax": 8,
+      "spreadX": 360,
+      "spreadY": 120,
+      "riseY": 300,
+      "durationMs": 1100
+    }
+  },
+  "winText": {
+    "panel": {
+      "stroke": "#fbbf24",
+      "strokeWidth": 3
+    },
+    "amountText": { "fill": "#fbbf24" },
+    "lineAmountText": { "fill": "#fbbf24" }
+  }
+}
+
+

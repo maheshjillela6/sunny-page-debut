@@ -1,0 +1,10 @@
+{
+  "winText": {
+    "panel": {
+      "stroke": "#d4af37",
+      "strokeWidth": 3
+    },
+    "amountText": { "fill": "#d4af37" },
+    "lineAmountText": { "fill": "#d4af37" }
+  }
+}

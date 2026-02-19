@@ -1,0 +1,20 @@
+{
+  "base": {
+    "candidates": [
+      { "type": "image", "key": "background", "scaleMode": "cover" }
+    ],
+    "fallback": { "type": "graphics", "kind": "solid", "color": "#1a1a0f" }
+  },
+  "ambient": {
+    "items": [
+      {
+        "id": "bg_ambient",
+        "kind": "ambient",
+        "candidates": [
+          { "type": "spine", "key": "bg_ambient", "animation": { "loop": true } }
+        ],
+        "position": { "x": 640, "y": 360 }
+      }
+    ]
+  }
+}

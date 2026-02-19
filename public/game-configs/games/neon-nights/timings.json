@@ -1,0 +1,9 @@
+{
+  "win.paylineLoop.step": 1800,
+  "win.paylineLoop.max": 12000,
+  "cascade.winPresentation": 500,
+  "cascade.removal": 350,
+  "cascade.collapse": 400,
+  "cascade.refill": 350,
+  "cascade.interStepDelay": 200
+}

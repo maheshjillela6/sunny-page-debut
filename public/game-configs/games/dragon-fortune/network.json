@@ -1,0 +1,5 @@
+{
+  "adapterType": "mock",
+  "rest": { "baseUrl": "/api", "timeout": 30000 },
+  "stomp": { "url": "/ws", "reconnectDelay": 5000, "heartbeatIncoming": 10000 }
+}

@@ -1,0 +1,6 @@
+/**
+ * Global CSS - Application-wide styles
+ * Re-exports from main index.css
+ */
+
+@import '../index.css';

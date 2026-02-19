@@ -1,0 +1,30 @@
+{
+  "id": "multiSpin",
+  "name": "Multi-Spin",
+  "maxIterations": 5,
+  "initialIterations": 3,
+  "resetCondition": {
+    "type": "never",
+    "resetTo": 0
+  },
+  "completionCondition": {
+    "type": "fixedCount",
+    "count": 3
+  },
+  "baseMultiplier": 1,
+  "multiplierProgression": {
+    "type": "perStep",
+    "increment": 1,
+    "max": 5
+  },
+  "spinCount": 3,
+  "perSpinRules": [
+    { "multiplierOverride": 1 },
+    { "multiplierOverride": 2 },
+    { "multiplierOverride": 3 }
+  ],
+  "speedVariants": {
+    "turbo": { "maxIterations": 5 },
+    "instant": { "maxIterations": 5 }
+  }
+}

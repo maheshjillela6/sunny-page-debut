@@ -1,0 +1,225 @@
+{
+  "engine": {
+    "fixedTimestep": 0.016667,
+    "maxDeltaTime": 0.033333,
+    "targetFPS": 60
+  },
+
+  "grid": {
+    "cols": 5,
+    "rows": 3,
+    "cellWidth": 120,
+    "cellHeight": 120,
+    "spacing": 8
+  },
+
+  "layout": {
+    "virtualWidth": 1280,
+    "virtualHeight": 720,
+    "grid": {
+      "x": 295,
+      "y": 135
+    },
+    "hud": {
+      "topBar": { "height": 60 },
+      "bottomBar": { "height": 100 }
+    }
+  },
+
+  "spin": {
+    "anticipation": {
+      "duration": 50,
+      "scale": 0.98,
+      "easing": "easeOutQuad"
+    },
+    "acceleration": {
+      "rate": 120,
+      "curve": "exponential"
+    },
+    "maxSpeed": 28,
+    "deceleration": {
+      "rate": 80,
+      "duration": 350,
+      "curve": "easeOutCubic"
+    },
+    "stagger": {
+      "delay": 80,
+      "pattern": "sequential"
+    },
+    "settle": {
+      "duration": 200,
+      "bounceStrength": 0.3,
+      "bounceCount": 2,
+      "easing": "easeOutBack"
+    },
+    "minSpinTime": 500
+  },
+
+  "reel": {
+    "blurEnabled": true,
+    "blurStrength": 0.5,
+    "symbolBuffer": 2,
+    "wrapAround": true
+  },
+
+  "symbols": {
+    "landingBounce": {
+      "enabled": true,
+      "strength": 0.1,
+      "duration": 150
+    },
+    "winPulse": {
+      "enabled": true,
+      "scale": 1.15,
+      "duration": 400,
+      "repeatCount": 3
+    },
+    "idleAnimation": {
+      "enabled": false,
+      "interval": 5000
+    }
+  },
+
+  "wins": {
+    "lineHighlight": {
+      "lineWidth": 4,
+      "glowStrength": 0.5,
+      "animationDuration": 500,
+      "cycleDelay": 1000
+    },
+    "counter": {
+      "duration": 1000,
+      "easing": "easeOutQuad"
+    },
+    "bigWin": {
+      "thresholds": {
+        "bigWin": 10,
+        "megaWin": 25,
+        "epicWin": 50,
+        "legendaryWin": 100
+      },
+      "duration": {
+        "bigWin": 3000,
+        "megaWin": 4000,
+        "epicWin": 5000,
+        "legendaryWin": 6000
+      },
+      "coinRain": {
+        "enabled": true,
+        "particleCount": 50,
+        "duration": 3000
+      }
+    }
+  },
+
+  "transitions": {
+    "fade": {
+      "duration": 500,
+      "easing": "easeInOutSine"
+    },
+    "slide": {
+      "duration": 400,
+      "direction": "left",
+      "easing": "easeOutCubic"
+    },
+    "zoom": {
+      "duration": 600,
+      "scale": 1.5,
+      "easing": "easeOutBack"
+    },
+    "portal": {
+      "duration": 800,
+      "spiralTurns": 2
+    }
+  },
+
+  "audio": {
+    "masterVolume": 1.0,
+    "musicVolume": 0.7,
+    "sfxVolume": 1.0,
+    "fadeInDuration": 500,
+    "fadeOutDuration": 300
+  },
+
+  "features": {
+    "freeSpins": {
+      "triggerCount": 3,
+      "initialSpins": 10,
+      "retriggerSpins": 5,
+      "multiplierEnabled": true,
+      "startingMultiplier": 1
+    },
+    "holdRespin": {
+      "triggerCount": 6,
+      "initialRespins": 3,
+      "resetOnLock": true
+    },
+    "multipliers": {
+      "enabled": true,
+      "maxMultiplier": 100,
+      "cascadeIncrement": 1
+    }
+  },
+
+  "paylines": {
+    "type": "ways",
+    "count": 243,
+    "minMatch": 3
+  },
+
+  "rtp": {
+    "base": 96.0,
+    "withFeatures": 96.5
+  },
+
+  "theme": {
+    "primaryColor": "#8b5cf6",
+    "secondaryColor": "#6366f1",
+    "accentColor": "#06b6d4",
+    "backgroundColor": "#0f0f23",
+    "surfaceColor": "#1a1a2e",
+    "textColor": "#ffffff",
+    "mutedColor": "#9ca3af"
+  },
+
+  "hud": {
+    "balance": {
+      "format": "currency",
+      "decimals": 2,
+      "animate": true,
+      "animationDuration": 500
+    },
+    "win": {
+      "format": "currency",
+      "decimals": 2,
+      "animate": true,
+      "animationDuration": 1000,
+      "hideOnZero": true
+    },
+    "bet": {
+      "format": "currency",
+      "decimals": 2,
+      "presets": [0.20, 0.50, 1.00, 2.00, 5.00, 10.00, 20.00, 50.00, 100.00]
+    },
+    "multiplier": {
+      "showOnBase": false,
+      "animate": true,
+      "pulseOnIncrease": true
+    }
+  },
+
+  "autoplay": {
+    "enabled": true,
+    "maxSpins": 100,
+    "stopOnFeature": true,
+    "stopOnBigWin": true,
+    "lossLimitEnabled": true,
+    "winLimitEnabled": true
+  },
+
+  "turbo": {
+    "enabled": true,
+    "speedMultiplier": 2.0,
+    "skipAnimations": false
+  }
+}

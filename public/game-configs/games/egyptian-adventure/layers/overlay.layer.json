@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "dimBackground": {
+    "color": "#1a1a0f",
+    "alpha": 0.75
+  },
+  "animation": {
+    "showDurationMs": 280,
+    "hideDurationMs": 220,
+    "scaleFrom": 0.9
+  },
+  "sublayers": [
+    {
+      "name": "OverlayContent",
+      "zIndex": 1,
+      "elements": []
+    }
+  ]
+}

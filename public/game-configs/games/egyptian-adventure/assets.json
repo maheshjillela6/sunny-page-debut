@@ -1,0 +1,100 @@
+{
+  "basePath": "/assets/games/slots/egyptian-adventure",
+
+  "bundles": {
+    "preload": {
+      "priority": 0,
+      "required": true,
+      "assets": [
+        { "type": "image", "key": "loading_bg", "path": "images/loading_bg.png" }
+      ]
+    },
+
+    "core": {
+      "priority": 1,
+      "required": true,
+      "assets": [
+        { "type": "image", "key": "background", "path": "images/background.png" },
+        { "type": "image", "key": "frame", "path": "images/frame.png" },
+        { "type": "image", "key": "logo", "path": "images/logo.png" }
+      ]
+    },
+
+    "symbols": {
+      "priority": 2,
+      "required": true,
+      "assets": [
+        { "type": "atlas", "key": "symbols_atlas", "path": "atlases/symbols.json" },
+        { "type": "image", "key": "symbol_wild", "path": "images/symbols/wild.png" },
+        { "type": "image", "key": "symbol_scatter", "path": "images/symbols/scatter.png" },
+        { "type": "image", "key": "symbol_pharaoh", "path": "images/symbols/pharaoh.png" },
+        { "type": "image", "key": "symbol_anubis", "path": "images/symbols/anubis.png" },
+        { "type": "image", "key": "symbol_scarab", "path": "images/symbols/scarab.png" },
+        { "type": "image", "key": "symbol_eye", "path": "images/symbols/eye.png" },
+        { "type": "image", "key": "symbol_ankh", "path": "images/symbols/ankh.png" },
+        { "type": "image", "key": "symbol_a", "path": "images/symbols/a.png" },
+        { "type": "image", "key": "symbol_k", "path": "images/symbols/k.png" },
+        { "type": "image", "key": "symbol_q", "path": "images/symbols/q.png" },
+        { "type": "image", "key": "symbol_j", "path": "images/symbols/j.png" },
+        { "type": "image", "key": "symbol_10", "path": "images/symbols/10.png" }
+      ]
+    },
+
+    "spine": {
+      "priority": 3,
+      "required": false,
+      "assets": [
+        { "type": "spine", "key": "win_celebration", "path": "spine/win/win.json", "atlasPath": "spine/win/win.atlas" },
+        { "type": "spine", "key": "pharaoh_anim", "path": "spine/pharaoh/pharaoh.json", "atlasPath": "spine/pharaoh/pharaoh.atlas" },
+        { "type": "spine", "key": "bg_ambient", "path": "spine/bg/ambient.json", "atlasPath": "spine/bg/ambient.atlas" }
+      ]
+    },
+
+    "ui": {
+      "priority": 4,
+      "required": false,
+      "assets": [
+        { "type": "image", "key": "btn_spin", "path": "images/ui/btn_spin.png" },
+        { "type": "image", "key": "btn_menu", "path": "images/ui/btn_menu.png" }
+      ]
+    },
+
+    "effects": {
+      "priority": 5,
+      "required": false,
+      "assets": [
+        { "type": "atlas", "key": "effects_atlas", "path": "atlases/effects.json" },
+        { "type": "atlas", "key": "sand_effects", "path": "atlases/sand.json" }
+      ]
+    },
+
+    "audio": {
+      "priority": 6,
+      "required": false,
+      "assets": [
+        { "type": "audio", "key": "music_base", "path": "audios/base_game.mp3" },
+        { "type": "audio", "key": "music_freespins", "path": "audios/freespins.mp3" },
+        { "type": "audio", "key": "sfx_spin", "path": "audios/spin.mp3" },
+        { "type": "audio", "key": "sfx_win", "path": "audios/win.mp3" },
+        { "type": "audio", "key": "sfx_bigwin", "path": "audios/bigwin.mp3" },
+        { "type": "audio", "key": "sfx_scatter", "path": "audios/scatter.mp3" }
+      ]
+    },
+
+    "fonts": {
+      "priority": 7,
+      "required": false,
+      "assets": [
+        { "type": "font", "key": "EgyptFont", "path": "fonts/egypt.woff2" }
+      ]
+    }
+  },
+
+  "audio": "audio.json",
+
+  "fallbacks": {
+    "missingSymbol": "images/placeholder_symbol.png",
+    "missingBackground": "#1a1a0f",
+    "useDefaults": false
+  }
+}

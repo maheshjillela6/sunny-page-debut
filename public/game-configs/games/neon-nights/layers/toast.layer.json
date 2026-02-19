@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "baseY": 18,
+  "toastWidth": 300,
+  "toastHeight": 48,
+  "margin": 10,
+  "background": {
+    "fill": "#1e1b4b",
+    "fillAlpha": 0.95,
+    "radius": 10
+  },
+  "accentBar": { "width": 4, "radius": 3 },
+  "border": { "strokeWidth": 1, "strokeAlpha": 0.5, "radius": 10 },
+  "text": { "fontFamily": "Arial", "fontSize": 14, "fill": "#e0d4ff", "wordWrapWidth": 265 },
+  "typeColors": {
+    "info": "#818cf8",
+    "success": "#34d399",
+    "warning": "#fbbf24",
+    "error": "#f87171"
+  },
+  "animation": { "showDurationMs": 280, "hideDurationMs": 180 }
+}

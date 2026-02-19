@@ -1,0 +1,139 @@
+{
+  "urls": [
+    "PrimarySounds.ogg",
+    "PrimarySounds.m4a",
+    "PrimarySounds.mp3",
+    "PrimarySounds.ac3"
+  ],
+  "sprite": {
+    "ambientSoundBGFS": [
+      0,
+      14336.009070294784
+    ],
+    "ambientSoundBGFSHS": [
+      16000,
+      22384.965986394564
+    ],
+    "formationSndHigh": [
+      40000,
+      1365.328798185942
+    ],
+    "formationSndLow": [
+      43000,
+      682.6757369614497
+    ],
+    "mx_background_sound": [
+      45000,
+      56490.74829931973, true
+    ],
+    "mx_reelExpansionBg": [
+      103000,
+      38000, true
+    ],
+    "sx_anticipation": [
+      142000,
+      6000
+    ],
+    "sx_button_click_sound": [
+      149000,
+      682.6757369614427
+    ],
+    "sx_game_intro": [
+      151000,
+      7000
+    ],
+    "sx_reel_spinning": [
+      159000,
+      2048.0045351473846, true
+    ],
+    "sx_reelstop_1": [
+      163000,
+      1000
+    ],
+    "sx_reelstop_2": [
+      165000,
+      1001.2925170067888
+    ],
+    "sx_reelstop_3": [
+      168000,
+      1000
+    ],
+    "sx_reelstop_4": [
+      170000,
+      1000
+    ],
+    "sx_reelstop_5": [
+      172000,
+      1000
+    ],
+    "sx_show_popup": [
+      174000,
+      1365.328798185942
+    ],
+    "sx_spin_start_btn": [
+      177000,
+      960.000000000008
+    ],
+    "sx_spin_stop_btn": [
+      179000,
+      682.6757369614427
+    ],
+    "transitionExplode": [
+      181000,
+      2440.4535147392326
+    ],
+    "sx_reel_spinning_v2": [
+      187000,
+      2000,
+      true
+    ],
+    "sx_reelstop_1_v2": [
+      190000,
+      500
+    ],
+    "sx_reelstop_2_v2": [
+      192000,
+      500
+    ],
+    "sx_reelstop_3_v2": [
+      194000,
+      500
+    ],
+    "sx_reelstop_4_v2": [
+      196000,
+      500
+    ],
+    "sx_reelstop_5_v2": [
+      198000,
+      500
+    ],
+    "mx_freespins_background_sound_v2": [
+      200000,
+      69397.57369614512, true
+    ],
+    "mx_background_sound_v2": [
+      271000,
+      26322.562358276627, true
+    ],
+    "bg_post_win": [
+      300000,
+      37268.707482993195, true
+    ],
+    "PF_new_anticipation_v2": [
+      340000,
+      1201.2698412698342, true
+    ],
+    "mx_background_sound_v3": [
+      344000,
+      63996.46258503401, true
+    ],
+    "sx_game_logo_intro_v1": [
+      411000,
+      5327.687074829953
+    ],
+    "sx_preloader_coins_shower_v1": [
+      418000,
+      500
+    ]
+  }
+}

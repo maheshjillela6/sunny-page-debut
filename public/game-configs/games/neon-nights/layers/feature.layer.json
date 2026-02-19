@@ -1,0 +1,10 @@
+{
+  "banner": {
+    "border": { "stroke": "#c084fc" },
+    "text": { "fill": "#c084fc" }
+  },
+  "counter": {
+    "border": { "stroke": "#c084fc" },
+    "labelText": { "fill": "#c084fc" }
+  }
+}

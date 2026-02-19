@@ -1,0 +1,102 @@
+{
+  "description": "Egyptian Adventure — gold/sand theme. Spine pharaoh & scarab, tween for low symbols.",
+  "defaultComposition": {
+    "layers": [
+      {
+        "id": "main",
+        "type": "sprite",
+        "zIndex": 1,
+        "frameName": "{symbolId}",
+        "states": {
+          "idle": { "visible": true, "static": true, "animationDriver": "none" },
+          "spinning": { "visible": true, "static": true, "animationDriver": "none" },
+          "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "symbolLand" } },
+          "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winPulse", "loop": true } },
+          "big_win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winPulse", "scale": 1.15, "loop": true } },
+          "anticipation": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "shake", "intensity": 1.5, "loop": true } }
+        }
+      }
+    ],
+    "highlight": { "color": 13877271, "alpha": 0.35, "padding": 4, "cornerRadius": 8 }
+  },
+  "symbols": {
+    "WILD": {
+      "symbolId": "WILD",
+      "layers": [
+        {
+          "id": "gold_bg",
+          "type": "graphics",
+          "zIndex": 0,
+          "graphics": { "shape": "roundRect", "fill": "#3d2b00", "fillAlpha": 0.7, "cornerRadius": 8 },
+          "states": {},
+          "defaultState": { "visible": true, "static": true }
+        },
+        {
+          "id": "spine_fg",
+          "type": "spine",
+          "zIndex": 1,
+          "assetKey": "pharaoh",
+          "states": {
+            "idle": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "pharaoh", "animationName": "idle", "loop": true } },
+            "spinning": { "visible": false },
+            "landing": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "pharaoh", "animationName": "land", "loop": false } },
+            "win": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "pharaoh", "animationName": "win", "loop": true } },
+            "big_win": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "pharaoh", "animationName": "bigwin", "loop": false } },
+            "anticipation": { "visible": true, "static": false, "animationDriver": "spine", "spine": { "skeletonKey": "pharaoh", "animationName": "anticipation", "loop": true } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        }
+      ],
+      "highlight": { "color": 13877271, "alpha": 0.4, "padding": 6, "cornerRadius": 10, "useGlow": true }
+    },
+    "SCATTER": {
+      "symbolId": "SCATTER",
+      "layers": [
+        {
+          "id": "scarab_sprite",
+          "type": "sprite",
+          "zIndex": 0,
+          "frameName": "SCATTER",
+          "states": {
+            "idle": { "visible": true, "static": true },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "bounce", "duration": 0.4 } },
+            "win": { "visible": false, "swapRenderer": true, "swapLayerType": "spine", "swapAssetKey": "scarab" },
+            "big_win": { "visible": false, "swapRenderer": true, "swapLayerType": "spine", "swapAssetKey": "scarab" },
+            "anticipation": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "pulse", "loop": true } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        }
+      ]
+    },
+    "BONUS": {
+      "symbolId": "BONUS",
+      "layers": [
+        {
+          "id": "pyramid_bg",
+          "type": "graphics",
+          "zIndex": 0,
+          "graphics": { "shape": "polygon", "fill": "#d4a017", "fillAlpha": 0.3, "points": [60, 0, 120, 120, 0, 120] },
+          "states": {},
+          "defaultState": { "visible": true, "static": true }
+        },
+        {
+          "id": "bonus_sprite",
+          "type": "sprite",
+          "zIndex": 1,
+          "frameName": "BONUS",
+          "scale": 0.85,
+          "states": {
+            "idle": { "visible": true, "static": true },
+            "spinning": { "visible": true, "static": true },
+            "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "bounce", "duration": 0.5 } },
+            "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "scatterGlow", "color": 13877271, "loop": true } },
+            "anticipation": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "shake", "intensity": 3, "loop": true } }
+          },
+          "defaultState": { "visible": true, "static": true }
+        }
+      ],
+      "highlight": { "color": 13877271, "alpha": 0.5, "padding": 4, "cornerRadius": 0 }
+    }
+  }
+}

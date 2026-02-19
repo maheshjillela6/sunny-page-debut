@@ -1,0 +1,183 @@
+{
+  "symbols": {
+    "WILD": {
+      "id": "WILD",
+      "name": "Dragon Wild",
+      "type": "special",
+      "color": "#f59e0b",
+      "payouts": [0, 0, 60, 150, 750],
+      "substitutes": true,
+      "substituteExclude": ["SCATTER", "LINK"],
+      "expandsOnFreeSpins": true,
+      "animations": {
+        "idle": "wild_idle",
+        "win": "wild_win",
+        "land": "wild_land",
+        "expand": "wild_expand"
+      },
+      "spine": {
+        "enabled": true,
+        "skeleton": "wild",
+        "animations": {
+          "idle": "idle",
+          "win": "win",
+          "land": "land",
+          "expand": "expand"
+        }
+      },
+      "audio": {
+        "land": "sfx_wild_land",
+        "win": "sfx_win_line",
+        "expand": "sfx_wild_expand"
+      }
+    },
+    "SCATTER": {
+      "id": "SCATTER",
+      "name": "Fortune Scatter",
+      "type": "special",
+      "color": "#dc2626",
+      "payouts": [0, 0, 8, 30, 150],
+      "triggersFeature": "freeSpins",
+      "triggerCount": 3,
+      "scatterPay": true,
+      "animations": {
+        "idle": "scatter_idle",
+        "win": "scatter_win",
+        "land": "scatter_land",
+        "trigger": "scatter_trigger"
+      },
+      "spine": {
+        "enabled": true,
+        "skeleton": "scatter",
+        "animations": {
+          "idle": "idle",
+          "win": "win",
+          "land": "land",
+          "trigger": "trigger"
+        }
+      },
+      "audio": {
+        "land": "sfx_scatter_land",
+        "trigger": "sfx_scatter_trigger"
+      }
+    },
+    "LINK": {
+      "id": "LINK",
+      "name": "Grid Link",
+      "type": "special",
+      "color": "#a855f7",
+      "payouts": [0, 0, 0, 0, 0],
+      "triggersFeature": "dualGridSync",
+      "triggerCount": 4,
+      "animations": {
+        "idle": "link_idle",
+        "win": "link_win",
+        "land": "link_land"
+      },
+      "audio": {
+        "land": "sfx_link_land"
+      }
+    },
+    "DRAGON": {
+      "id": "DRAGON",
+      "name": "Dragon",
+      "type": "high",
+      "color": "#ef4444",
+      "payouts": [0, 0, 25, 75, 300],
+      "animations": { "idle": "dragon_idle", "win": "dragon_win" },
+      "sprite": { "atlas": "symbols", "frame": "symbol_dragon" }
+    },
+    "PHOENIX": {
+      "id": "PHOENIX",
+      "name": "Phoenix",
+      "type": "high",
+      "color": "#f97316",
+      "payouts": [0, 0, 20, 60, 250],
+      "animations": { "idle": "phoenix_idle", "win": "phoenix_win" },
+      "sprite": { "atlas": "symbols", "frame": "symbol_phoenix" }
+    },
+    "TIGER": {
+      "id": "TIGER",
+      "name": "Tiger",
+      "type": "high",
+      "color": "#eab308",
+      "payouts": [0, 0, 15, 45, 180],
+      "animations": { "idle": "tiger_idle", "win": "tiger_win" },
+      "sprite": { "atlas": "symbols", "frame": "symbol_tiger" }
+    },
+    "JADE": {
+      "id": "JADE",
+      "name": "Jade Stone",
+      "type": "low",
+      "color": "#22c55e",
+      "payouts": [0, 0, 8, 20, 80],
+      "animations": { "idle": "jade_idle", "win": "jade_win" },
+      "sprite": { "atlas": "symbols", "frame": "symbol_jade" }
+    },
+    "COIN": {
+      "id": "COIN",
+      "name": "Gold Coin",
+      "type": "low",
+      "color": "#d4a017",
+      "payouts": [0, 0, 6, 15, 60],
+      "animations": { "idle": "coin_idle", "win": "coin_win" },
+      "sprite": { "atlas": "symbols", "frame": "symbol_coin" }
+    },
+    "SCROLL": {
+      "id": "SCROLL",
+      "name": "Ancient Scroll",
+      "type": "low",
+      "color": "#a16207",
+      "payouts": [0, 0, 5, 12, 50],
+      "animations": { "idle": "scroll_idle", "win": "scroll_win" },
+      "sprite": { "atlas": "symbols", "frame": "symbol_scroll" }
+    }
+  },
+
+  "reelStrips": {
+    "base": [
+      ["DRAGON", "PHOENIX", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "WILD", "JADE", "COIN", "SCROLL", "TIGER", "DRAGON", "SCATTER", "JADE", "COIN", "SCROLL", "PHOENIX", "TIGER"],
+      ["PHOENIX", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "WILD", "TIGER", "JADE", "COIN", "DRAGON", "SCROLL", "PHOENIX", "TIGER", "SCATTER", "JADE", "COIN", "SCROLL", "DRAGON"],
+      ["TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "WILD", "TIGER", "JADE", "COIN", "SCATTER", "SCROLL", "DRAGON", "PHOENIX", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX"],
+      ["JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "WILD", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "SCATTER", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "TIGER"],
+      ["COIN", "SCROLL", "DRAGON", "PHOENIX", "TIGER", "JADE", "COIN", "WILD", "SCROLL", "DRAGON", "PHOENIX", "SCATTER", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "TIGER", "JADE"]
+    ],
+    "secondary": [
+      ["LINK", "JADE", "COIN", "SCROLL", "DRAGON", "LINK", "PHOENIX", "TIGER", "JADE", "COIN", "LINK", "SCROLL", "DRAGON", "WILD", "JADE", "COIN"],
+      ["JADE", "LINK", "COIN", "SCROLL", "DRAGON", "PHOENIX", "LINK", "TIGER", "JADE", "WILD", "COIN", "LINK", "SCROLL", "DRAGON", "PHOENIX", "TIGER"],
+      ["COIN", "SCROLL", "LINK", "DRAGON", "PHOENIX", "TIGER", "JADE", "LINK", "COIN", "SCROLL", "WILD", "DRAGON", "LINK", "PHOENIX", "TIGER", "JADE"]
+    ],
+    "freeSpins": [
+      ["WILD", "DRAGON", "PHOENIX", "TIGER", "WILD", "JADE", "COIN", "DRAGON", "WILD", "PHOENIX", "TIGER", "JADE", "DRAGON", "PHOENIX", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX"],
+      ["DRAGON", "WILD", "PHOENIX", "TIGER", "JADE", "WILD", "COIN", "SCROLL", "DRAGON", "WILD", "PHOENIX", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "TIGER", "JADE", "COIN"],
+      ["PHOENIX", "TIGER", "WILD", "JADE", "COIN", "SCROLL", "WILD", "DRAGON", "PHOENIX", "WILD", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "TIGER", "JADE", "COIN", "SCROLL"],
+      ["TIGER", "JADE", "COIN", "WILD", "SCROLL", "DRAGON", "PHOENIX", "WILD", "TIGER", "WILD", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON"],
+      ["JADE", "COIN", "SCROLL", "DRAGON", "WILD", "PHOENIX", "TIGER", "JADE", "WILD", "COIN", "WILD", "SCROLL", "DRAGON", "PHOENIX", "TIGER", "JADE", "COIN", "SCROLL", "DRAGON", "PHOENIX"]
+    ]
+  },
+
+  "weights": {
+    "base": {
+      "DRAGON": 10,
+      "PHOENIX": 11,
+      "TIGER": 12,
+      "JADE": 18,
+      "COIN": 20,
+      "SCROLL": 22,
+      "WILD": 2,
+      "SCATTER": 3,
+      "LINK": 4
+    },
+    "freeSpins": {
+      "DRAGON": 10,
+      "PHOENIX": 11,
+      "TIGER": 12,
+      "JADE": 16,
+      "COIN": 17,
+      "SCROLL": 18,
+      "WILD": 9,
+      "SCATTER": 0,
+      "LINK": 0
+    }
+  }
+}

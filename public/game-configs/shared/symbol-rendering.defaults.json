@@ -1,0 +1,22 @@
+{
+  "description": "Shared default symbol rendering config. Games inherit this unless they override.",
+  "defaultComposition": {
+    "layers": [
+      {
+        "id": "main",
+        "type": "sprite",
+        "zIndex": 1,
+        "frameName": "{symbolId}",
+        "states": {
+          "idle": { "visible": true, "static": true, "animationDriver": "none" },
+          "spinning": { "visible": true, "static": true, "animationDriver": "none" },
+          "landing": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "symbolLand" } },
+          "win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winPulse", "loop": true } },
+          "big_win": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "winPulse", "scale": 1.2, "loop": true } },
+          "anticipation": { "visible": true, "static": false, "animationDriver": "tween", "tween": { "type": "shake", "intensity": 2, "loop": true } }
+        }
+      }
+    ]
+  },
+  "symbols": {}
+}

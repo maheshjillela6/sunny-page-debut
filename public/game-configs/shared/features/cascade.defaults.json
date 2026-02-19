@@ -1,0 +1,117 @@
+{
+  "enabled": false,
+
+  "baseGame": {
+    "winPresentation": {
+      "style": "pulse",
+      "animation": {
+        "driver": "tween",
+        "tweenType": "winPulse",
+        "durationMs": 500,
+        "easing": "easeInOutSine",
+        "scale": 1.15,
+        "color": "#fbbf24"
+      },
+      "staggerMs": 30,
+      "ordering": "all_at_once",
+      "dimNonWinning": true,
+      "dimAlpha": 0.3,
+      "soundId": "cascade_win"
+    },
+
+    "removal": {
+      "style": "fade",
+      "animation": {
+        "driver": "tween",
+        "tweenType": "fadeOut",
+        "durationMs": 300,
+        "easing": "easeOutQuad",
+        "scale": 0.8
+      },
+      "staggerMs": 30,
+      "ordering": "all_at_once",
+      "particles": {
+        "enabled": false,
+        "type": "sparkle",
+        "count": 5,
+        "durationMs": 300
+      },
+      "soundId": "cascade_remove"
+    },
+
+    "collapse": {
+      "style": "gravity",
+      "animation": {
+        "driver": "tween",
+        "tweenType": "drop",
+        "durationMs": 400,
+        "easing": "easeOutBounce",
+        "bounce": {
+          "strength": 0.3,
+          "count": 2
+        }
+      },
+      "columnStaggerMs": 50,
+      "physics": {
+        "gravity": 980,
+        "maxVelocity": 2000,
+        "bounceCoefficient": 0.3,
+        "friction": 0.95
+      },
+      "soundId": "cascade_drop"
+    },
+
+    "refill": {
+      "style": "dropFromTop",
+      "animation": {
+        "driver": "tween",
+        "tweenType": "drop",
+        "durationMs": 350,
+        "easing": "easeOutBounce",
+        "distance": 200,
+        "bounce": {
+          "strength": 0.25,
+          "count": 2
+        }
+      },
+      "staggerMs": 60,
+      "ordering": "per_column",
+      "entryOffset": { "x": 0, "y": -300 },
+      "soundId": "cascade_refill"
+    },
+
+    "timing": {
+      "phaseOrdering": "sequential",
+      "interStepDelayMs": 200,
+      "maxCascadeDepth": 15,
+      "multiplierPerStep": 1
+    }
+  },
+
+  "turbo": {
+    "durationMultiplier": 0.4,
+    "skipWinPresentation": false,
+    "skipParticles": true,
+    "skipStagger": true,
+    "forceParallelPhases": false,
+    "minPhaseDurationMs": 50
+  },
+
+  "instant": {
+    "durationMultiplier": 0,
+    "skipWinPresentation": true,
+    "skipParticles": true,
+    "skipStagger": true,
+    "forceParallelPhases": true,
+    "minPhaseDurationMs": 0
+  },
+
+  "normal": {
+    "durationMultiplier": 1.0,
+    "skipWinPresentation": false,
+    "skipParticles": false,
+    "skipStagger": false,
+    "forceParallelPhases": false,
+    "minPhaseDurationMs": 0
+  }
+}

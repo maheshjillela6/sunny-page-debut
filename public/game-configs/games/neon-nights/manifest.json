@@ -1,0 +1,120 @@
+{
+  "id": "neon-nights",
+  "name": "Neon Nights",
+  "version": "1.0.0",
+  "description": "A vibrant cyberpunk-themed slot game with electrifying wins",
+
+  "type": "SLOT",
+  "mechanic": "standard",
+  "volatility": "high",
+
+  "grid": {
+    "cols": 5,
+    "rows": 3,
+    "cellWidth": 120,
+    "cellHeight": 120,
+    "spacing": 8
+  },
+
+  "paylines": {
+    "type": "lines",
+    "count": 20,
+    "minMatch": 3,
+    "definitions": [
+      [0, 1, 2, 3, 4],
+      [5, 6, 7, 8, 9],
+      [10, 11, 12, 13, 14],
+      [0, 6, 12, 8, 4],
+      [10, 6, 2, 8, 14],
+      [0, 1, 7, 13, 14],
+      [10, 11, 7, 3, 4],
+      [5, 1, 2, 3, 9],
+      [5, 11, 12, 13, 9],
+      [0, 6, 7, 8, 4],
+      [10, 6, 7, 8, 14],
+      [5, 1, 7, 13, 9],
+      [5, 11, 7, 3, 9],
+      [0, 6, 2, 8, 4],
+      [10, 6, 12, 8, 14],
+      [5, 1, 7, 3, 9],
+      [5, 11, 7, 13, 9],
+      [0, 1, 2, 8, 14],
+      [10, 11, 12, 8, 4],
+      [10, 6, 2, 3, 4]
+    ]
+  },
+
+  "rtp": {
+    "base": 96.5,
+    "withFeatures": 97.2
+  },
+
+  "maxWinXBet": 10000,
+
+  "features": {
+    "available": ["FREE_SPINS", "MULTIPLIERS", "EXPANDING_WILDS"],
+    "spinMechanisms": ["cascade"],
+    "baseGame": {
+      "spinStrategy": "left_to_right",
+      "spinConfig": {
+        "maxSpeed": 26,
+        "acceleration": 100,
+        "deceleration": 70,
+        "bounceStrength": 0.25,
+        "staggerDelay": 100
+      }
+    },
+    "freeSpins": {
+      "spinStrategy": "spiral_in",
+      "spinConfig": {
+        "maxSpeed": 30,
+        "acceleration": 140,
+        "deceleration": 90,
+        "spiralTightness": 0.8,
+        "staggerDelay": 50
+      },
+      "triggerSymbol": "SCATTER",
+      "triggerCount": 3,
+      "initialSpins": 10,
+      "retriggerSpins": 5,
+      "expandingWildsEnabled": true
+    },
+    "multipliers": {
+      "enabled": true,
+      "cascadeIncrement": 1,
+      "maxMultiplier": 10
+    }
+  },
+
+  "symbols": {
+    "high": ["A", "B", "C"],
+    "low": ["D", "E", "F"],
+    "special": ["WILD", "SCATTER", "BONUS"]
+  },
+
+  "theme": {
+    "primaryColor": "#8b5cf6",
+    "secondaryColor": "#6366f1",
+    "accentColor": "#06b6d4",
+    "backgroundColor": "#0f0f23",
+    "glowColor": "#c084fc"
+  },
+
+  "loading": {
+    "requiredBundles": ["core", "symbols", "spine", "background"],
+    "deferredBundles": ["audio", "effects", "ui", "fonts"],
+    "assetLoadBehavior": "useDefaults",
+    "showErrorOnFailure": false,
+    "maxRetries": 2
+  },
+
+  "configFiles": {
+    "layout": "layout.json",
+    "responsive": "responsive.json",
+    "symbols": "symbol-map.json",
+    "assets": "assets.json",
+    "animation": "animation.json",
+    "audio": "audio.json",
+    "cascade": "cascade.config.json"
+  }
+}

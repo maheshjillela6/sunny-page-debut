@@ -1,0 +1,170 @@
+{
+  "symbols": {
+    "WILD": {
+      "id": "WILD",
+      "name": "Pharaoh Wild",
+      "type": "special",
+      "color": "#ffd700",
+      "payouts": [0, 0, 100, 500, 2000],
+      "substitutes": true,
+      "expandsOnFreeSpins": true,
+      "animations": {
+        "idle": "pharaoh_wild_idle",
+        "win": "pharaoh_wild_win",
+        "expand": "pharaoh_wild_expand"
+      }
+    },
+    "SCATTER": {
+      "id": "S",
+      "name": "Scarab Scatter",
+      "type": "special",
+      "color": "#00ff88",
+      "payouts": [0, 0, 5, 25, 200],
+      "triggersFeature": "freeSpins",
+      "animations": {
+        "idle": "scarab_idle",
+        "win": "scarab_win",
+        "trigger": "scarab_trigger"
+      }
+    },
+    "BONUS": {
+      "id": "BONUS",
+      "name": "Pyramid Bonus",
+      "type": "special",
+      "color": "#d4a017",
+      "payouts": [0, 0, 0, 0, 0],
+      "triggersFeature": "pyramidBonus",
+      "animations": {
+        "idle": "pyramid_idle",
+        "trigger": "pyramid_open"
+      }
+    },
+    "PHARAOH": {
+      "id": "PHARAOH",
+      "name": "Pharaoh",
+      "type": "high",
+      "color": "#9333ea",
+      "payouts": [0, 0, 40, 150, 800],
+      "animations": {
+        "idle": "pharaoh_idle",
+        "win": "pharaoh_win"
+      }
+    },
+    "ANUBIS": {
+      "id": "ANUBIS",
+      "name": "Anubis",
+      "type": "high",
+      "color": "#1e40af",
+      "payouts": [0, 0, 30, 100, 500],
+      "animations": {
+        "idle": "anubis_idle",
+        "win": "anubis_win"
+      }
+    },
+    "SCARAB": {
+      "id": "SCARAB",
+      "name": "Golden Scarab",
+      "type": "high",
+      "color": "#15803d",
+      "payouts": [0, 0, 25, 80, 400],
+      "animations": {
+        "idle": "scarab_symbol_idle",
+        "win": "scarab_symbol_win"
+      }
+    },
+    "ANKH": {
+      "id": "ANKH",
+      "name": "Ankh",
+      "type": "high",
+      "color": "#dc2626",
+      "payouts": [0, 0, 20, 60, 300],
+      "animations": {
+        "idle": "ankh_idle",
+        "win": "ankh_win"
+      }
+    },
+    "EYE": {
+      "id": "EYE",
+      "name": "Eye of Horus",
+      "type": "high",
+      "color": "#0891b2",
+      "payouts": [0, 0, 15, 50, 250],
+      "animations": {
+        "idle": "eye_idle",
+        "win": "eye_win"
+      }
+    },
+    "A": {
+      "id": "A",
+      "name": "Ace",
+      "type": "low",
+      "color": "#ef4444",
+      "payouts": [0, 0, 10, 30, 100],
+      "animations": {
+        "idle": "a_idle",
+        "win": "a_win"
+      }
+    },
+    "K": {
+      "id": "K",
+      "name": "King",
+      "type": "low",
+      "color": "#f97316",
+      "payouts": [0, 0, 8, 25, 80],
+      "animations": {
+        "idle": "k_idle",
+        "win": "k_win"
+      }
+    },
+    "Q": {
+      "id": "Q",
+      "name": "Queen",
+      "type": "low",
+      "color": "#eab308",
+      "payouts": [0, 0, 6, 20, 60],
+      "animations": {
+        "idle": "q_idle",
+        "win": "q_win"
+      }
+    },
+    "J": {
+      "id": "J",
+      "name": "Jack",
+      "type": "low",
+      "color": "#22c55e",
+      "payouts": [0, 0, 5, 15, 50],
+      "animations": {
+        "idle": "j_idle",
+        "win": "j_win"
+      }
+    },
+    "10": {
+      "id": "10",
+      "name": "Ten",
+      "type": "low",
+      "color": "#3b82f6",
+      "payouts": [0, 0, 5, 10, 40],
+      "animations": {
+        "idle": "10_idle",
+        "win": "10_win"
+      }
+    }
+  },
+
+  "reelStrips": {
+    "base": [
+      ["PHARAOH", "A", "K", "ANUBIS", "Q", "J", "SCARAB", "10", "A", "ANKH", "K", "Q", "EYE", "J", "10", "SCATTER", "A", "K", "Q", "J"],
+      ["A", "ANUBIS", "K", "Q", "SCARAB", "J", "10", "PHARAOH", "A", "K", "ANKH", "Q", "J", "EYE", "10", "A", "K", "SCATTER", "Q", "J"],
+      ["K", "Q", "WILD", "J", "10", "PHARAOH", "A", "K", "ANUBIS", "Q", "J", "SCARAB", "10", "A", "ANKH", "K", "Q", "EYE", "J", "SCATTER"],
+      ["Q", "J", "SCARAB", "10", "A", "ANKH", "K", "Q", "EYE", "J", "10", "PHARAOH", "A", "ANUBIS", "K", "SCATTER", "Q", "J", "10", "A"],
+      ["J", "10", "A", "ANKH", "K", "Q", "EYE", "J", "10", "PHARAOH", "A", "K", "ANUBIS", "Q", "J", "SCARAB", "SCATTER", "10", "A", "K"]
+    ],
+    "freeSpins": [
+      ["WILD", "PHARAOH", "ANUBIS", "WILD", "SCARAB", "ANKH", "WILD", "EYE", "PHARAOH", "WILD", "A", "K", "Q", "J", "10", "A", "K", "Q", "J", "10"],
+      ["PHARAOH", "WILD", "ANUBIS", "SCARAB", "WILD", "ANKH", "EYE", "WILD", "PHARAOH", "A", "WILD", "K", "Q", "J", "10", "A", "K", "Q", "J", "10"],
+      ["ANUBIS", "PHARAOH", "WILD", "SCARAB", "ANKH", "WILD", "EYE", "PHARAOH", "WILD", "A", "K", "WILD", "Q", "J", "10", "A", "K", "Q", "J", "10"],
+      ["SCARAB", "ANUBIS", "PHARAOH", "WILD", "ANKH", "EYE", "WILD", "PHARAOH", "ANUBIS", "WILD", "A", "K", "Q", "WILD", "J", "10", "A", "K", "Q", "J"],
+      ["ANKH", "SCARAB", "ANUBIS", "PHARAOH", "WILD", "EYE", "PHARAOH", "WILD", "ANUBIS", "SCARAB", "WILD", "A", "K", "Q", "J", "WILD", "10", "A", "K", "Q"]
+    ]
+  }
+}

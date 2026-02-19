@@ -2,95 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* 
+ * SLOT GAME ENGINE DESIGN SYSTEM
+ * Casino-grade visual tokens for slot game UI
+ * All colors MUST be HSL
+ */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Surfaces */
+    --background: 220 20% 8%;
+    --foreground: 45 20% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 18% 12%;
+    --card-foreground: 45 20% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 20% 10%;
+    --popover-foreground: 45 20% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand Colors - Casino Gold Theme */
+    --primary: 45 100% 50%;
+    --primary-foreground: 220 20% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 45 20% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 100% 55%;
+    --accent-foreground: 220 20% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI Elements */
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 45 100% 50%;
+    --radius: 0.75rem;
 
-    --radius: 0.5rem;
+    /* Game-Specific Tokens */
+    --win-gold: 45 100% 55%;
+    --win-glow: 45 100% 65%;
+    --win-mega: 35 100% 60%;
+    --win-epic: 320 100% 60%;
+    
+    --reel-bg: 220 25% 6%;
+    --reel-border: 220 20% 15%;
+    --reel-glow: 45 80% 50%;
+    
+    --hud-bg: 220 20% 8% / 0.95;
+    --hud-border: 45 50% 35%;
+    --hud-text: 45 20% 90%;
+    --hud-value: 45 100% 55%;
+    
+    --btn-spin-bg: 45 100% 50%;
+    --btn-spin-glow: 45 100% 60%;
+    --btn-spin-text: 220 20% 8%;
+    --btn-spin-disabled: 220 10% 30%;
+    
+    --overlay-dark: 220 30% 5% / 0.85;
+    --overlay-glow: 45 100% 50% / 0.15;
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 45%), hsl(35 100% 55%), hsl(45 100% 50%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 25% 12%), hsl(220 25% 6%));
+    --gradient-reel: linear-gradient(180deg, hsl(220 30% 4%), hsl(220 25% 8%), hsl(220 30% 4%));
+    --gradient-win: linear-gradient(135deg, hsl(45 100% 50%), hsl(35 100% 60%));
+    --gradient-epic: linear-gradient(135deg, hsl(320 100% 50%), hsl(280 100% 60%), hsl(320 100% 55%));
+    
+    /* Shadows */
+    --shadow-gold: 0 0 20px hsl(45 100% 50% / 0.4);
+    --shadow-win: 0 0 40px hsl(45 100% 55% / 0.6);
+    --shadow-card: 0 4px 20px hsl(220 30% 5% / 0.5);
+    --shadow-button: 0 4px 15px hsl(45 100% 50% / 0.3);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (for menus) */
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 45 100% 50%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 45 20% 90%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 45 100% 50%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode is default for casino games */
+    --background: 220 20% 8%;
+    --foreground: 45 20% 95%;
   }
 }
 
@@ -100,6 +102,134 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Prevent text selection in game UI */
+  .game-ui {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+@layer components {
+  /* HUD Components */
+  .hud-panel {
+    @apply bg-card/95 backdrop-blur-sm border border-border rounded-lg;
+    box-shadow: var(--shadow-card);
+  }
+
+  .hud-value {
+    @apply text-2xl font-bold;
+    color: hsl(var(--hud-value));
+    text-shadow: 0 0 10px hsl(var(--win-gold) / 0.5);
+  }
+
+  .hud-label {
+    @apply text-xs uppercase tracking-wider;
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Spin Button */
+  .btn-spin {
+    @apply relative font-bold uppercase tracking-wider transition-all duration-200;
+    background: var(--gradient-gold);
+    color: hsl(var(--btn-spin-text));
+    box-shadow: var(--shadow-button);
+  }
+
+  .btn-spin:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-win);
+  }
+
+  .btn-spin:disabled {
+    @apply opacity-50 cursor-not-allowed;
+    filter: grayscale(0.5);
+  }
+
+  .btn-spin:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  /* Win Display */
+  .win-display {
+    @apply font-bold;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 0 10px hsl(var(--win-gold) / 0.5));
+  }
+
+  .win-display-mega {
+    background: var(--gradient-epic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulse-glow 1s ease-in-out infinite;
+  }
+
+  /* Overlay */
+  .game-overlay {
+    @apply fixed inset-0 flex items-center justify-center;
+    background: hsl(var(--overlay-dark));
+    backdrop-filter: blur(4px);
+  }
+
+  /* Reel Frame */
+  .reel-frame {
+    @apply relative overflow-hidden;
+    background: var(--gradient-reel);
+    border: 2px solid hsl(var(--reel-border));
+    border-radius: var(--radius);
+  }
+}
+
+@layer utilities {
+  /* Gold Text Glow */
+  .text-glow-gold {
+    text-shadow: 0 0 10px hsl(var(--win-gold) / 0.6), 0 0 20px hsl(var(--win-gold) / 0.4);
+  }
+
+  /* Pulsing Glow Animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 15px hsl(var(--win-gold) / 0.6));
+    }
+    50% {
+      filter: drop-shadow(0 0 25px hsl(var(--win-gold) / 0.9));
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 1.5s ease-in-out infinite;
+  }
+
+  /* Spin Animation */
+  @keyframes spin-button-pulse {
+    0%, 100% {
+      box-shadow: var(--shadow-button);
+    }
+    50% {
+      box-shadow: var(--shadow-win);
+    }
+  }
+
+  .animate-spin-ready {
+    animation: spin-button-pulse 2s ease-in-out infinite;
+  }
+
+  /* Canvas Container */
+  .canvas-container {
+    @apply absolute inset-0 overflow-hidden;
+    touch-action: none;
+  }
+
+  /* Letterbox Background */
+  .letterbox-bg {
+    background: hsl(220 30% 3%);
   }
 }

@@ -1,0 +1,35 @@
+{
+  "enabled": true,
+  "logo": {
+    "x": 70,
+    "y": 40,
+    "bgFill": "#c084fc",
+    "bgFillAlpha": 0.25,
+    "bgRadius": 24,
+    "ringStroke": "#c084fc",
+    "ringStrokeWidth": 2,
+    "ringRadius": 24,
+    "hexFill": "#c084fc",
+    "hexFillAlpha": 0.85,
+    "hexRadius": 14
+  },
+  "titleBar": {
+    "fill": "#1e1b4b",
+    "fillAlpha": 0.85,
+    "stroke": "#c084fc",
+    "strokeWidth": 2,
+    "strokeAlpha": 0.6,
+    "radius": 22,
+    "width": 380,
+    "height": 48,
+    "y": 16
+  },
+  "titleText": {
+    "fontFamily": "Arial",
+    "fontSize": 26,
+    "fontWeight": "bold",
+    "fill": "#e0d4ff",
+    "letterSpacing": 5,
+    "defaultText": "NEON NIGHTS"
+  }
+}

@@ -1,10 +1,12 @@
-const Index = () => {
+import React from 'react';
+import LobbyPage from '@/ui/pages/LobbyPage';
+import { ThemeProvider } from '../ui/providers/ThemeProvider';
+
+const Index: React.FC = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <h1 className="text-7xl font-bold tracking-tight text-foreground sm:text-9xl">
-        Hello World
-      </h1>
-    </div>
+    <ThemeProvider>
+       <LobbyPage />
+    </ThemeProvider>
   );
 };
 

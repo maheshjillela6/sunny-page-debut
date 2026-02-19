@@ -1,0 +1,46 @@
+{
+  "enabled": true,
+  "baseGame": {
+    "winPresentation": {
+      "style": "pulse",
+      "animation": { "driver": "tween", "tweenType": "winPulse", "durationMs": 550, "easing": "easeInOutSine", "scale": 1.2, "color": "#f59e0b" },
+      "staggerMs": 35,
+      "ordering": "all_at_once",
+      "dimNonWinning": true,
+      "dimAlpha": 0.25,
+      "soundId": "cascade_win"
+    },
+    "removal": {
+      "style": "explode",
+      "animation": { "driver": "tween", "tweenType": "zoomOut", "durationMs": 380, "easing": "easeOutBack", "scale": 0, "intensity": 0.9 },
+      "staggerMs": 45,
+      "ordering": "per_column",
+      "particles": { "enabled": true, "type": "ember", "count": 12, "color": "#ef4444", "durationMs": 450 },
+      "soundId": "cascade_remove"
+    },
+    "collapse": {
+      "style": "gravity",
+      "animation": { "driver": "tween", "tweenType": "drop", "durationMs": 420, "easing": "easeOutBounce", "bounce": { "strength": 0.35, "count": 2 } },
+      "columnStaggerMs": 55,
+      "physics": { "gravity": 1000, "maxVelocity": 2200, "bounceCoefficient": 0.35, "friction": 0.94 },
+      "soundId": "cascade_drop"
+    },
+    "refill": {
+      "style": "dropFromTop",
+      "animation": { "driver": "tween", "tweenType": "drop", "durationMs": 380, "easing": "easeOutBounce", "distance": 220, "bounce": { "strength": 0.3, "count": 2 } },
+      "staggerMs": 65,
+      "ordering": "per_column",
+      "entryOffset": { "x": 0, "y": -320 },
+      "soundId": "cascade_refill"
+    },
+    "timing": {
+      "phaseOrdering": "sequential",
+      "interStepDelayMs": 220,
+      "maxCascadeDepth": 18,
+      "multiplierPerStep": 1
+    }
+  },
+  "turbo": { "durationMultiplier": 0.4, "skipWinPresentation": false, "skipParticles": true, "skipStagger": true, "forceParallelPhases": false, "minPhaseDurationMs": 50 },
+  "instant": { "durationMultiplier": 0, "skipWinPresentation": true, "skipParticles": true, "skipStagger": true, "forceParallelPhases": true, "minPhaseDurationMs": 0 },
+  "normal": { "durationMultiplier": 1.0, "skipWinPresentation": false, "skipParticles": false, "skipStagger": false, "forceParallelPhases": false, "minPhaseDurationMs": 0 }
+}

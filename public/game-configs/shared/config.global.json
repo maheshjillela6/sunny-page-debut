@@ -1,0 +1,299 @@
+{
+  "$schema": "./config-schema.json",
+  "$comment": "Global configuration with naming conventions - all games inherit from this",
+  
+  "CONFIG_VERSION": "1.0.0",
+  "CONFIG_TYPE": "global",
+
+  "NAMING_CONVENTIONS": {
+    "configFiles": {
+      "manifest": "manifest.json",
+      "layout": "layout.json",
+      "grid": "grid.config.json",
+      "spin": "spin.config.json",
+      "symbols": "symbols.config.json",
+      "assets": "assets.config.json",
+      "audio": "audio.config.json",
+      "responsive": "responsive.config.json",
+      "animation": "animation.config.json",
+      "features": "features.config.json"
+    },
+    "folders": {
+      "images": "images",
+      "spine": "spine",
+      "atlases": "atlases",
+      "audio": "audio",
+      "fonts": "fonts",
+      "videos": "videos"
+    },
+    "spineAnimations": {
+      "symbolPrefix": "symbol_",
+      "states": {
+        "idle": "{symbol}_idle",
+        "lowwin": "{symbol}_lowwin",
+        "highwin": "{symbol}_highwin",
+        "land": "{symbol}_land",
+        "anticipation": "{symbol}_anticipation",
+        "scatter": "{symbol}_scatter",
+        "expand": "{symbol}_expand"
+      }
+    },
+    "assetKeys": {
+      "background": "bg_{screen}",
+      "frame": "frame_{type}",
+      "button": "btn_{name}_{state}",
+      "symbol": "sym_{id}",
+      "particle": "particle_{type}",
+      "audio": "sfx_{category}_{name}"
+    }
+  },
+
+  "ENGINE": {
+    "FIXED_TIMESTEP": 0.016667,
+    "MAX_DELTA_TIME": 0.033333,
+    "TARGET_FPS": 60,
+    "PHYSICS_ITERATIONS": 3
+  },
+
+  "GRID": {
+    "DEFAULT_COLS": 5,
+    "DEFAULT_ROWS": 3,
+    "DEFAULT_CELL_WIDTH": 120,
+    "DEFAULT_CELL_HEIGHT": 120,
+    "DEFAULT_SPACING": 8,
+    "SYMBOL_BUFFER": 2
+  },
+
+  "LAYOUT": {
+    "VIRTUAL_WIDTH": 1280,
+    "VIRTUAL_HEIGHT": 720,
+    "HUD_TOP_HEIGHT": 60,
+    "HUD_BOTTOM_HEIGHT": 100,
+    "SAFE_AREA": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    }
+  },
+
+  "SPIN": {
+    "ANTICIPATION": {
+      "DURATION": 50,
+      "SCALE": 0.98,
+      "EASING": "easeOutQuad"
+    },
+    "ACCELERATION": {
+      "RATE": 120,
+      "CURVE": "exponential"
+    },
+    "MAX_SPEED": 28,
+    "DECELERATION": {
+      "RATE": 80,
+      "DURATION": 350,
+      "CURVE": "easeOutCubic"
+    },
+    "STAGGER": {
+      "DELAY": 80,
+      "PATTERN": "sequential"
+    },
+    "SETTLE": {
+      "DURATION": 200,
+      "BOUNCE_STRENGTH": 0.3,
+      "BOUNCE_COUNT": 2,
+      "EASING": "easeOutBack"
+    },
+    "MIN_SPIN_TIME": 500,
+    "TURBO_MULTIPLIER": 2.0
+  },
+
+  "REEL": {
+    "BLUR_ENABLED": true,
+    "BLUR_STRENGTH": 0.5,
+    "WRAP_AROUND": true,
+    "ANTICIPATION_ENABLED": true
+  },
+
+  "SYMBOLS": {
+    "LANDING": {
+      "ENABLED": true,
+      "BOUNCE_STRENGTH": 0.1,
+      "DURATION": 150
+    },
+    "WIN_PULSE": {
+      "ENABLED": true,
+      "SCALE": 1.15,
+      "DURATION": 400,
+      "REPEAT_COUNT": 3
+    },
+    "IDLE": {
+      "ENABLED": false,
+      "INTERVAL": 5000
+    }
+  },
+
+  "WINS": {
+    "LINE_HIGHLIGHT": {
+      "LINE_WIDTH": 4,
+      "GLOW_STRENGTH": 0.5,
+      "ANIMATION_DURATION": 500,
+      "CYCLE_DELAY": 1000
+    },
+    "COUNTER": {
+      "DURATION": 1000,
+      "EASING": "easeOutQuad"
+    },
+    "BIG_WIN": {
+      "THRESHOLDS": {
+        "bigWin": 10,
+        "megaWin": 25,
+        "epicWin": 50,
+        "legendaryWin": 100
+      },
+      "DURATIONS": {
+        "bigWin": 3000,
+        "megaWin": 4000,
+        "epicWin": 5000,
+        "legendaryWin": 6000
+      },
+      "COIN_RAIN": {
+        "ENABLED": true,
+        "PARTICLE_COUNT": 50,
+        "DURATION": 3000
+      }
+    }
+  },
+
+  "TRANSITIONS": {
+    "FADE": {
+      "DURATION": 500,
+      "EASING": "easeInOutSine"
+    },
+    "SLIDE": {
+      "DURATION": 400,
+      "DIRECTION": "left",
+      "EASING": "easeOutCubic"
+    },
+    "ZOOM": {
+      "DURATION": 600,
+      "SCALE": 1.5,
+      "EASING": "easeOutBack"
+    },
+    "PORTAL": {
+      "DURATION": 800,
+      "SPIRAL_TURNS": 2
+    }
+  },
+
+  "AUDIO": {
+    "MASTER_VOLUME": 1.0,
+    "MUSIC_VOLUME": 0.7,
+    "SFX_VOLUME": 1.0,
+    "AMBIENT_VOLUME": 0.5,
+    "FADE_IN_DURATION": 500,
+    "FADE_OUT_DURATION": 300,
+    "MUTE_ON_BLUR": true,
+    "MUTE_ON_PAUSE": true
+  },
+
+  "FEATURES": {
+    "FREE_SPINS": {
+      "TRIGGER_COUNT": 3,
+      "INITIAL_SPINS": 10,
+      "RETRIGGER_SPINS": 5,
+      "MULTIPLIER_ENABLED": true,
+      "STARTING_MULTIPLIER": 1
+    },
+    "HOLD_RESPIN": {
+      "TRIGGER_COUNT": 6,
+      "INITIAL_RESPINS": 3,
+      "RESET_ON_LOCK": true
+    },
+    "MULTIPLIERS": {
+      "ENABLED": true,
+      "MAX_MULTIPLIER": 100,
+      "CASCADE_INCREMENT": 1
+    },
+    "GAMBLE": {
+      "ENABLED": false,
+      "MAX_WIN_MULTIPLIER": 10
+    }
+  },
+
+  "PAYLINES": {
+    "TYPE": "ways",
+    "COUNT": 243,
+    "MIN_MATCH": 3,
+    "LEFT_TO_RIGHT": true
+  },
+
+  "RTP": {
+    "BASE": 96.0,
+    "WITH_FEATURES": 96.5
+  },
+
+  "HUD": {
+    "BALANCE": {
+      "FORMAT": "currency",
+      "DECIMALS": 2,
+      "ANIMATE": true,
+      "ANIMATION_DURATION": 500
+    },
+    "WIN": {
+      "FORMAT": "currency",
+      "DECIMALS": 2,
+      "ANIMATE": true,
+      "ANIMATION_DURATION": 1000,
+      "HIDE_ON_ZERO": true
+    },
+    "BET": {
+      "FORMAT": "currency",
+      "DECIMALS": 2,
+      "PRESETS": [0.20, 0.50, 1.00, 2.00, 5.00, 10.00, 20.00, 50.00, 100.00]
+    },
+    "MULTIPLIER": {
+      "SHOW_ON_BASE": false,
+      "ANIMATE": true,
+      "PULSE_ON_INCREASE": true
+    }
+  },
+
+  "AUTOPLAY": {
+    "ENABLED": true,
+    "MAX_SPINS": 100,
+    "STOP_ON_FEATURE": true,
+    "STOP_ON_BIG_WIN": true,
+    "LOSS_LIMIT_ENABLED": true,
+    "WIN_LIMIT_ENABLED": true
+  },
+
+  "TURBO": {
+    "ENABLED": true,
+    "SPEED_MULTIPLIER": 2.0,
+    "SKIP_ANIMATIONS": false
+  },
+
+  "NETWORK": {
+    "TIMEOUT": 30000,
+    "RETRY_COUNT": 3,
+    "RETRY_DELAY": 1000,
+    "HEARTBEAT_INTERVAL": 10000
+  },
+
+  "DEBUG": {
+    "ENABLED": false,
+    "SHOW_FPS": false,
+    "SHOW_DRAW_CALLS": false,
+    "SHOW_BOUNDS": false,
+    "VERBOSE_LOGGING": false
+  },
+
+  "LOCALIZATION": {
+    "DEFAULT_LOCALE": "en",
+    "FALLBACK_LOCALE": "en",
+    "SUPPORTED_LOCALES": ["en", "es", "hi", "ar", "zh"],
+    "NAMESPACES": ["game", "feature", "win", "ui", "lobby", "hud", "error", "modal", "settings", "session", "loading", "custom"],
+    "STRING_FILES_PATTERN": "strings.{locale}.json",
+    "GAME_I18N_DIR": "i18n"
+  }
+}

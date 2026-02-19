@@ -1,0 +1,69 @@
+{
+  "enabled": true,
+  "type": "code",
+  "code": {
+    "background": {
+      "activeVariant": "sandstone",
+      "variants": {
+        "sandstone": {
+          "fill": "#1a1a0f",
+          "fillAlpha": 0.85,
+          "radius": 12,
+          "inset": 12
+        }
+      }
+    },
+    "frameBorder": {
+      "activeVariant": "gold",
+      "variants": {
+        "gold": {
+          "stroke": "#d4af37",
+          "strokeWidth": 2,
+          "strokeAlpha": 0.8,
+          "radius": 12,
+          "margin": 2,
+          "inner": {
+            "stroke": "#b8860b",
+            "strokeWidth": 1,
+            "strokeAlpha": 0.3,
+            "radius": 10,
+            "margin": 6
+          }
+        }
+      },
+      "animations": {
+        "win": [
+          { "property": "alpha", "from": 0.6, "to": 1, "durationMs": 500, "loop": true, "yoyo": true }
+        ]
+      }
+    },
+    "columnSeparator": {
+      "activeVariant": "gold",
+      "variants": {
+        "gold": {
+          "stroke": "#d4af37",
+          "strokeWidth": 1,
+          "strokeAlpha": 0.1,
+          "paddingY": 8
+        }
+      }
+    },
+    "rowSeparator": {
+      "activeVariant": "gold",
+      "variants": {
+        "gold": {
+          "stroke": "#b8860b",
+          "strokeWidth": 1,
+          "strokeAlpha": 0.08,
+          "paddingX": 8
+        }
+      }
+    },
+    "effect": {
+      "enabled": false
+    },
+    "animation": {
+      "enabled": false
+    }
+  }
+}

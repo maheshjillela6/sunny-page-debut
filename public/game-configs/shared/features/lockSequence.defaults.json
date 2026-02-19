@@ -1,0 +1,27 @@
+{
+  "id": "lockSequence",
+  "name": "Lock Sequence",
+  "maxIterations": 20,
+  "initialIterations": 5,
+  "resetCondition": {
+    "type": "symbolLand",
+    "symbol": "LOCK",
+    "resetTo": 3
+  },
+  "completionCondition": {
+    "type": "noNewLocks"
+  },
+  "baseMultiplier": 1,
+  "multiplierProgression": {
+    "type": "perLock",
+    "increment": 1,
+    "max": 10
+  },
+  "triggerSymbol": "LOCK",
+  "lockMode": "position",
+  "persistLocked": true,
+  "speedVariants": {
+    "turbo": { "maxIterations": 20 },
+    "instant": { "maxIterations": 20 }
+  }
+}

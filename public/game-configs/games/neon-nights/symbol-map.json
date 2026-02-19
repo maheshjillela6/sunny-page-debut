@@ -1,0 +1,223 @@
+{
+  "symbols": {
+    "WILD": {
+      "id": "WILD",
+      "name": "Wild",
+      "type": "special",
+      "color": "#f59e0b",
+      "payouts": [0, 0, 50, 100, 500],
+      "substitutes": true,
+      "substituteExclude": ["SCATTER", "BONUS"],
+      "expandsOnFreeSpins": true,
+      "animations": {
+        "idle": "wild_idle",
+        "win": "wild_win",
+        "land": "wild_land",
+        "expand": "wild_expand"
+      },
+      "spine": {
+        "enabled": true,
+        "skeleton": "wild",
+        "animations": {
+          "idle": "idle",
+          "win": "win",
+          "land": "land",
+          "expand": "expand"
+        }
+      },
+      "audio": {
+        "land": "sfx_wild_land",
+        "win": "sfx_win_line",
+        "expand": "sfx_wild_expand"
+      }
+    },
+    "SCATTER": {
+      "id": "SCATTER",
+      "name": "Scatter",
+      "type": "special",
+      "color": "#8b5cf6",
+      "payouts": [0, 0, 5, 20, 100],
+      "triggersFeature": "freeSpins",
+      "triggerCount": 3,
+      "scatterPay": true,
+      "animations": {
+        "idle": "scatter_idle",
+        "win": "scatter_win",
+        "land": "scatter_land",
+        "trigger": "scatter_trigger"
+      },
+      "spine": {
+        "enabled": true,
+        "skeleton": "scatter",
+        "animations": {
+          "idle": "idle",
+          "win": "win",
+          "land": "land",
+          "trigger": "trigger"
+        }
+      },
+      "audio": {
+        "land": "sfx_scatter_land",
+        "trigger": "sfx_scatter_trigger"
+      }
+    },
+    "BONUS": {
+      "id": "BONUS",
+      "name": "Bonus",
+      "type": "special",
+      "color": "#ec4899",
+      "payouts": [0, 0, 0, 0, 0],
+      "triggersFeature": "holdRespin",
+      "triggerCount": 6,
+      "animations": {
+        "idle": "bonus_idle",
+        "win": "bonus_win",
+        "land": "bonus_land"
+      },
+      "spine": {
+        "enabled": true,
+        "skeleton": "bonus",
+        "animations": {
+          "idle": "idle",
+          "win": "win",
+          "land": "land"
+        }
+      },
+      "audio": {
+        "land": "sfx_bonus_land"
+      }
+    },
+    "A": {
+      "id": "A",
+      "name": "Neon A",
+      "type": "high",
+      "color": "#3b82f6",
+      "payouts": [0, 0, 20, 50, 200],
+      "animations": {
+        "idle": "a_idle",
+        "win": "a_win"
+      },
+      "sprite": {
+        "atlas": "symbols",
+        "frame": "symbol_a"
+      }
+    },
+    "B": {
+      "id": "B",
+      "name": "Neon B",
+      "type": "high",
+      "color": "#10b981",
+      "payouts": [0, 0, 15, 40, 150],
+      "animations": {
+        "idle": "b_idle",
+        "win": "b_win"
+      },
+      "sprite": {
+        "atlas": "symbols",
+        "frame": "symbol_b"
+      }
+    },
+    "C": {
+      "id": "C",
+      "name": "Neon C",
+      "type": "high",
+      "color": "#06b6d4",
+      "payouts": [0, 0, 10, 30, 100],
+      "animations": {
+        "idle": "c_idle",
+        "win": "c_win"
+      },
+      "sprite": {
+        "atlas": "symbols",
+        "frame": "symbol_c"
+      }
+    },
+    "D": {
+      "id": "D",
+      "name": "Neon D",
+      "type": "low",
+      "color": "#ef4444",
+      "payouts": [0, 0, 5, 15, 50],
+      "animations": {
+        "idle": "d_idle",
+        "win": "d_win"
+      },
+      "sprite": {
+        "atlas": "symbols",
+        "frame": "symbol_d"
+      }
+    },
+    "E": {
+      "id": "E",
+      "name": "Neon E",
+      "type": "low",
+      "color": "#f97316",
+      "payouts": [0, 0, 5, 10, 40],
+      "animations": {
+        "idle": "e_idle",
+        "win": "e_win"
+      },
+      "sprite": {
+        "atlas": "symbols",
+        "frame": "symbol_e"
+      }
+    },
+    "F": {
+      "id": "F",
+      "name": "Neon F",
+      "type": "low",
+      "color": "#eab308",
+      "payouts": [0, 0, 5, 10, 30],
+      "animations": {
+        "idle": "f_idle",
+        "win": "f_win"
+      },
+      "sprite": {
+        "atlas": "symbols",
+        "frame": "symbol_f"
+      }
+    }
+  },
+
+  "reelStrips": {
+    "base": [
+      ["A", "B", "C", "D", "E", "F", "A", "B", "C", "WILD", "D", "E", "F", "A", "B", "SCATTER", "C", "D", "E", "F"],
+      ["B", "C", "D", "E", "F", "A", "B", "WILD", "C", "D", "E", "F", "A", "B", "C", "D", "E", "SCATTER", "F", "A"],
+      ["C", "D", "E", "F", "A", "B", "C", "D", "WILD", "E", "F", "SCATTER", "A", "B", "C", "D", "E", "F", "A", "B"],
+      ["D", "E", "F", "A", "B", "C", "WILD", "D", "E", "F", "A", "B", "C", "D", "SCATTER", "E", "F", "A", "B", "C"],
+      ["E", "F", "A", "B", "C", "D", "E", "F", "A", "WILD", "B", "C", "D", "SCATTER", "E", "F", "A", "B", "C", "D"]
+    ],
+    "freeSpins": [
+      ["WILD", "A", "B", "C", "WILD", "D", "E", "A", "WILD", "B", "C", "D", "A", "B", "C", "D", "E", "F", "A", "B"],
+      ["A", "WILD", "B", "C", "D", "WILD", "E", "F", "A", "WILD", "B", "C", "D", "E", "F", "A", "B", "C", "D", "E"],
+      ["B", "C", "WILD", "D", "E", "F", "WILD", "A", "B", "WILD", "C", "D", "E", "F", "A", "B", "C", "D", "E", "F"],
+      ["C", "D", "E", "WILD", "F", "A", "B", "WILD", "C", "WILD", "D", "E", "F", "A", "B", "C", "D", "E", "F", "A"],
+      ["D", "E", "F", "A", "WILD", "B", "C", "D", "WILD", "E", "WILD", "F", "A", "B", "C", "D", "E", "F", "A", "B"]
+    ]
+  },
+
+  "weights": {
+    "base": {
+      "A": 10,
+      "B": 12,
+      "C": 14,
+      "D": 18,
+      "E": 20,
+      "F": 22,
+      "WILD": 2,
+      "SCATTER": 3,
+      "BONUS": 1
+    },
+    "freeSpins": {
+      "A": 10,
+      "B": 12,
+      "C": 14,
+      "D": 16,
+      "E": 18,
+      "F": 20,
+      "WILD": 8,
+      "SCATTER": 0,
+      "BONUS": 0
+    }
+  }
+}

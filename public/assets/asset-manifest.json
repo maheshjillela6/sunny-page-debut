@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "games": {
+    "neon-nights": {
+      "atlases": ["symbols", "ui"],
+      "images": ["background.png", "logo.png", "frame.png"],
+      "spine": ["wild", "scatter", "bonus"],
+      "audios": ["spin.mp3", "win.mp3", "bigwin.mp3", "freespins.mp3", "music.mp3"],
+      "fonts": ["main.woff2"]
+    },
+    "egyptian-adventure": {
+      "atlases": ["symbols", "ui"],
+      "images": ["pyramid_bg.png", "gold_frame.png", "logo.png"],
+      "spine": ["pharaoh", "scarab", "anubis"],
+      "audios": ["sand_spin.mp3", "pharaoh_win.mp3", "scarab_trigger.mp3", "music.mp3"],
+      "fonts": ["egyptian.woff2"]
+    }
+  },
+  "shared": {
+    "images": ["default_symbol.png", "coin.png"],
+    "audios": ["button_click.mp3", "error.mp3"],
+    "fonts": ["roboto.woff2"]
+  }
+}

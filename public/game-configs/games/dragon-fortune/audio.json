@@ -1,0 +1,40 @@
+{
+  "basePath": "/assets/games/slots/dragon-fortune/audios",
+  "music": {
+    "base": { "key": "music_base", "path": "music/base_theme.mp3", "loop": true, "volume": 0.7, "fadeIn": 1000, "fadeOut": 500 },
+    "freeSpins": { "key": "music_freespins", "path": "music/freespins_theme.mp3", "loop": true, "volume": 0.8, "fadeIn": 500, "fadeOut": 500 },
+    "bigWin": { "key": "music_bigwin", "path": "music/bigwin.mp3", "loop": false, "volume": 1.0 }
+  },
+  "sfx": {
+    "spin": {
+      "start": { "key": "sfx_spin_start", "path": "sfx/spin_start.mp3", "volume": 0.8 },
+      "loop": { "key": "sfx_spin_loop", "path": "sfx/spin_loop.mp3", "loop": true, "volume": 0.5 },
+      "stop": { "key": "sfx_spin_stop", "path": "sfx/spin_stop.mp3", "volume": 0.8 }
+    },
+    "reel": {
+      "land": { "key": "sfx_reel_land", "path": "sfx/reel_land.mp3", "volume": 0.6 },
+      "bounce": { "key": "sfx_reel_bounce", "path": "sfx/reel_bounce.mp3", "volume": 0.4 }
+    },
+    "win": {
+      "line": { "key": "sfx_win_line", "path": "sfx/win_line.mp3", "volume": 0.7 },
+      "small": { "key": "sfx_win_small", "path": "sfx/win_small.mp3", "volume": 0.8 },
+      "medium": { "key": "sfx_win_medium", "path": "sfx/win_medium.mp3", "volume": 0.9 },
+      "big": { "key": "sfx_win_big", "path": "sfx/win_big.mp3", "volume": 1.0 },
+      "counter": { "key": "sfx_win_counter", "path": "sfx/win_counter.mp3", "volume": 0.5, "loop": true }
+    },
+    "symbols": {
+      "wild": { "land": { "key": "sfx_wild_land", "path": "sfx/wild_land.mp3", "volume": 0.9 }, "expand": { "key": "sfx_wild_expand", "path": "sfx/wild_expand.mp3", "volume": 1.0 } },
+      "scatter": { "land": { "key": "sfx_scatter_land", "path": "sfx/scatter_land.mp3", "volume": 0.9 }, "trigger": { "key": "sfx_scatter_trigger", "path": "sfx/scatter_trigger.mp3", "volume": 1.0 } },
+      "link": { "land": { "key": "sfx_link_land", "path": "sfx/link_land.mp3", "volume": 0.9 } }
+    },
+    "feature": {
+      "trigger": { "key": "sfx_feature_trigger", "path": "sfx/feature_trigger.mp3", "volume": 1.0 },
+      "intro": { "key": "sfx_feature_intro", "path": "sfx/feature_intro.mp3", "volume": 1.0 }
+    },
+    "ui": {
+      "click": { "key": "sfx_ui_click", "path": "sfx/ui_click.mp3", "volume": 0.5 }
+    }
+  },
+  "volumes": { "master": 1.0, "music": 0.7, "sfx": 1.0, "ambient": 0.3 },
+  "mute": { "onBlur": true, "onPause": true }
+}

@@ -1,0 +1,66 @@
+{
+  "enabled": true,
+  "zIndex": 600,
+  "sublayers": [
+    {
+      "name": "PresentationContent",
+      "zIndex": 0,
+      "elements": []
+    }
+  ],
+  "winAnimation": {
+    "animations": [
+      {
+        "type": "classic",
+        "enabled": true,
+        "count": 28,
+        "colors": ["#ffffff", "#f59e0b", "#fbbf24"],
+        "radiusMin": 2,
+        "radiusMax": 5,
+        "spreadX": 160,
+        "spreadY": 55,
+        "riseY": 120,
+        "durationMs": 650,
+        "alphaMin": 0.45,
+        "alphaMax": 0.95
+      },
+      {
+        "type": "burst",
+        "enabled": false,
+        "count": 45,
+        "colors": ["#f59e0b", "#b45309", "#ffffff", "#fbbf24"],
+        "radiusMin": 3,
+        "radiusMax": 7,
+        "spreadX": 200,
+        "spreadY": 70,
+        "riseY": 180,
+        "durationMs": 850,
+        "alphaMin": 0.5,
+        "alphaMax": 1.0
+      },
+      {
+        "type": "shockwave",
+        "enabled": false,
+        "ringCount": 3,
+        "ringColor": "#f59e0b",
+        "ringAlpha": 0.85,
+        "sparkCount": 28,
+        "sparkColors": ["#f59e0b", "#fbbf24", "#ffffff"],
+        "maxRadius": 240,
+        "durationMs": 900
+      },
+      {
+        "type": "rain",
+        "enabled": false,
+        "count": 55,
+        "colors": ["#f59e0b", "#fbbf24", "#b45309", "#ffffff"],
+        "radiusMin": 3,
+        "radiusMax": 7,
+        "spreadX": 320,
+        "fallY": 1160,
+        "durationMs": 1200,
+        "staggerMs": 600
+      }
+    ]
+  }
+}

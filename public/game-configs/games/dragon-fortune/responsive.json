@@ -1,0 +1,37 @@
+{
+  "breakpoints": {
+    "mobile": { "maxWidth": 768, "orientation": "portrait" },
+    "mobileLandscape": { "maxShortSide": 500, "orientation": "landscape" },
+    "tablet": { "minWidth": 769, "maxWidth": 1024 },
+    "desktop": { "minWidth": 1025 }
+  },
+  "layouts": {
+    "desktop": {
+      "virtualWidth": 1280,
+      "virtualHeight": 720,
+      "grid": { "x": 80, "y": 80, "cellWidth": 120, "cellHeight": 120, "spacing": 8 },
+      "secondaryGrid": { "x": 810, "y": 160, "cellWidth": 100, "cellHeight": 100, "spacing": 6 },
+      "hud": { "topBar": { "height": 60 }, "bottomBar": { "height": 100 } },
+      "scale": { "min": 0.5, "max": 1.0 }
+    },
+    "tablet": {
+      "virtualWidth": 1024,
+      "virtualHeight": 768,
+      "grid": { "x": 50, "y": 100, "cellWidth": 100, "cellHeight": 100, "spacing": 6 },
+      "secondaryGrid": { "x": 630, "y": 180, "cellWidth": 85, "cellHeight": 85, "spacing": 5 },
+      "hud": { "topBar": { "height": 50 }, "bottomBar": { "height": 90 } },
+      "scale": { "min": 0.6, "max": 1.0 }
+    },
+    "mobile": {
+      "virtualWidth": 720,
+      "virtualHeight": 1280,
+      "grid": { "x": 30, "y": 150, "cellWidth": 100, "cellHeight": 100, "spacing": 5 },
+      "secondaryGrid": { "x": 160, "y": 650, "cellWidth": 80, "cellHeight": 80, "spacing": 5 },
+      "hud": { "topBar": { "height": 80 }, "bottomBar": { "height": 200 } },
+      "scale": { "min": 0.7, "max": 1.0 }
+    }
+  },
+  "safeArea": { "top": 0, "bottom": 0, "left": 0, "right": 0 },
+  "letterbox": { "enabled": true, "color": "#000000" },
+  "aspectRatio": { "min": 0.5, "max": 2.0, "preferred": 1.778 }
+}

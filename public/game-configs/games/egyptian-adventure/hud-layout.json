@@ -1,0 +1,12 @@
+{
+  "_description": "Egyptian Adventure HUD — game-specific style overrides only. Positions inherited from shared template.",
+  "template": "icon",
+  "renderer": "react",
+  "imageBasePath": "assets/games/egyptian-adventure/images/hud",
+
+  "elements": {
+    "spinButton": {
+      "style": { "glowColor": "#d4a017" }
+    }
+  }
+}

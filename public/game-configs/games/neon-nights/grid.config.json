@@ -1,0 +1,10 @@
+{
+  "GRID": {
+    "COLS": 5,
+    "ROWS": 4,
+    "CELL_WIDTH": 130,
+    "CELL_HEIGHT": 130,
+    "SPACING": 2,
+    "SYMBOL_PADDING": 0.9
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "egyptian-adventure",
+  "name": "Egyptian Adventure",
+  "version": "1.0.0",
+  "description": "An ancient Egypt themed slot game with pyramids and pharaohs",
+
+  "type": "SLOT",
+  "mechanic": "standard",
+  "volatility": "medium",
+
+  "grid": {
+    "cols": 5,
+    "rows": 3,
+    "cellWidth": 120,
+    "cellHeight": 120,
+    "spacing": 8
+  },
+
+  "symbols": {
+    "high": ["PHARAOH", "ANUBIS", "SCARAB", "ANKH", "EYE"],
+    "low": ["10", "J", "Q", "K", "A"],
+    "special": ["WILD", "SCATTER", "BONUS"]
+  },
+
+  "features": {
+    "baseGame": {
+      "spinStrategy": "left_to_right",
+      "spinConfig": {
+        "maxSpeed": 26,
+        "acceleration": 100,
+        "deceleration": 70,
+        "bounceStrength": 0.25,
+        "staggerDelay": 100
+      }
+    },
+    "freeSpins": {
+      "spinStrategy": "spiral_in",
+      "spinConfig": {
+        "maxSpeed": 30,
+        "acceleration": 140,
+        "deceleration": 90,
+        "spiralTightness": 0.8,
+        "staggerDelay": 50
+      },
+      "triggerSymbol": "SCATTER",
+      "triggerCount": 3,
+      "initialSpins": 15,
+      "stickyWilds": true
+    },
+    "pyramidBonus": {
+      "spinStrategy": "zoom_out",
+      "spinConfig": {
+        "maxSpeed": 18,
+        "zoomScale": 0.5
+      },
+      "triggerSymbol": "BONUS",
+      "triggerCount": 3,
+      "picks": 5
+    }
+  },
+
+  "paylines": {
+    "type": "lines",
+    "count": 25,
+    "patterns": [
+      [1, 1, 1, 1, 1],
+      [0, 0, 0, 0, 0],
+      [2, 2, 2, 2, 2],
+      [0, 1, 2, 1, 0],
+      [2, 1, 0, 1, 2],
+      [0, 0, 1, 2, 2],
+      [2, 2, 1, 0, 0],
+      [1, 0, 0, 0, 1],
+      [1, 2, 2, 2, 1],
+      [0, 1, 0, 1, 0],
+      [2, 1, 2, 1, 2],
+      [1, 0, 1, 0, 1],
+      [1, 2, 1, 2, 1],
+      [0, 1, 1, 1, 0],
+      [2, 1, 1, 1, 2],
+      [1, 1, 0, 1, 1],
+      [1, 1, 2, 1, 1],
+      [0, 0, 1, 0, 0],
+      [2, 2, 1, 2, 2],
+      [0, 2, 0, 2, 0],
+      [2, 0, 2, 0, 2],
+      [1, 0, 2, 0, 1],
+      [1, 2, 0, 2, 1],
+      [0, 2, 2, 2, 0],
+      [2, 0, 0, 0, 2]
+    ]
+  },
+
+  "rtp": {
+    "base": 95.8,
+    "withFeatures": 96.9
+  },
+
+  "maxWinXBet": 8000,
+
+  "loading": {
+    "requiredBundles": ["core", "symbols"],
+    "deferredBundles": ["audio", "spine", "effects"],
+    "assetLoadBehavior": "showError",
+    "showErrorOnFailure": true,
+    "maxRetries": 3
+  },
+
+  "assets": {
+    "basePath": "/assets/games/slots/egyptian-adventure",
+    "preload": [
+      { "type": "atlas", "key": "symbols", "url": "atlases/symbols.json" },
+      { "type": "image", "key": "background", "url": "images/pyramid_bg.png" },
+      { "type": "image", "key": "frame", "url": "images/gold_frame.png" },
+      { "type": "image", "key": "logo", "url": "images/logo.png" },
+      { "type": "spine", "key": "pharaoh", "url": "spine/pharaoh/pharaoh.json" },
+      { "type": "spine", "key": "scarab", "url": "spine/scarab/scarab.json" },
+      { "type": "audio", "key": "spin", "url": "audios/sand_spin.mp3" },
+      { "type": "audio", "key": "win", "url": "audios/pharaoh_win.mp3" },
+      { "type": "audio", "key": "freespins", "url": "audios/scarab_trigger.mp3" },
+      { "type": "font", "key": "main", "url": "fonts/egyptian.woff2" }
+    ]
+  },
+
+  "configFiles": {
+    "grid": "grid.config.json",
+    "spin": "spin.config.json",
+    "symbols": "symbols.config.json"
+  },
+
+  "theme": {
+    "primaryColor": "#d4a017",
+    "accentColor": "#1e3a5f",
+    "backgroundColor": "#0d1b2a"
+  }
+}

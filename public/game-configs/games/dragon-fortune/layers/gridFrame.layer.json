@@ -1,0 +1,211 @@
+{
+  "enabled": true,
+  "type": "code",
+  "code": {
+    "background": {
+      "activeVariant": "dragon",
+      "variants": {
+        "dragon": {
+          "fill": "#1a0505",
+          "fillAlpha": 0.9,
+          "radius": 12,
+          "inset": 14
+        }
+      }
+    },
+    "frameBorder": {
+      "activeVariant": "dragon",
+      "variants": {
+        "dragon": {
+          "stroke": "#dc2626",
+          "strokeWidth": 3,
+          "strokeAlpha": 0.95,
+          "radius": 12,
+          "margin": 2,
+          "inner": {
+            "stroke": "#f59e0b",
+            "strokeWidth": 1.5,
+            "strokeAlpha": 0.5,
+            "radius": 10,
+            "margin": 5
+          }
+        }
+      },
+      "animations": {
+        "idle": [
+          { "property": "alpha", "from": 0.8, "to": 1, "durationMs": 2000, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+        ],
+        "win": [
+          { "property": "alpha", "from": 0.6, "to": 1, "durationMs": 350, "loop": true, "yoyo": true, "ease": "sine.inOut" },
+          { "property": "scaleX", "from": 1, "to": 1.02, "durationMs": 500, "loop": true, "yoyo": true, "ease": "sine.inOut" },
+          { "property": "scaleY", "from": 1, "to": 1.02, "durationMs": 500, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+        ],
+        "spin": [
+          { "property": "alpha", "from": 1, "to": 0.4, "durationMs": 200, "ease": "power2.out" },
+          { "property": "alpha", "from": 0.4, "to": 0.7, "durationMs": 400, "delay": 200, "ease": "sine.inOut" }
+        ]
+      }
+    },
+    "columnSeparator": {
+      "activeVariant": "ember",
+      "variants": {
+        "ember": {
+          "stroke": "#dc2626",
+          "strokeWidth": 1.5,
+          "strokeAlpha": 0.2,
+          "paddingY": 8
+        }
+      },
+      "animations": {
+        "idle": [
+          { "property": "alpha", "from": 0.3, "to": 1, "durationMs": 1800, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+        ],
+        "win": [
+          { "property": "alpha", "from": 0.5, "to": 1, "durationMs": 400, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+        ]
+      }
+    },
+    "rowSeparator": {
+      "activeVariant": "ember",
+      "variants": {
+        "ember": {
+          "stroke": "#f59e0b",
+          "strokeWidth": 1,
+          "strokeAlpha": 0.15,
+          "paddingX": 8
+        }
+      },
+      "animations": {
+        "idle": [
+          { "property": "alpha", "from": 0.3, "to": 1, "durationMs": 2200, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+        ]
+      }
+    },
+    "effect": {
+      "enabled": true,
+      "activeVariant": "fireGlow",
+      "variants": {
+        "fireGlow": {
+          "type": "glow",
+          "color": "#dc2626",
+          "alpha": 0.1,
+          "blur": 18
+        }
+      }
+    },
+    "animation": {
+      "enabled": true,
+      "activeVariant": "emberPulse",
+      "variants": {
+        "emberPulse": {
+          "type": "pulse",
+          "color": "#ef4444",
+          "alpha": 0.25,
+          "durationMs": 2500,
+          "loop": true
+        }
+      }
+    }
+  },
+  "secondaryGrid": {
+    "enabled": true,
+    "type": "code",
+    "code": {
+      "background": {
+        "activeVariant": "dragonSub",
+        "variants": {
+          "dragonSub": {
+            "fill": "#0a0a1a",
+            "fillAlpha": 0.85,
+            "radius": 10,
+            "inset": 10
+          }
+        }
+      },
+      "frameBorder": {
+        "activeVariant": "dragonSub",
+        "variants": {
+          "dragonSub": {
+            "stroke": "#a855f7",
+            "strokeWidth": 2.5,
+            "strokeAlpha": 0.9,
+            "radius": 10,
+            "margin": 2,
+            "inner": {
+              "stroke": "#7c3aed",
+              "strokeWidth": 1,
+              "strokeAlpha": 0.4,
+              "radius": 8,
+              "margin": 4
+            }
+          }
+        },
+        "animations": {
+          "idle": [
+            { "property": "alpha", "from": 0.7, "to": 1, "durationMs": 2500, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+          ],
+          "win": [
+            { "property": "alpha", "from": 0.5, "to": 1, "durationMs": 300, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+          ]
+        }
+      },
+      "columnSeparator": {
+        "activeVariant": "subtle",
+        "variants": {
+          "subtle": {
+            "stroke": "#a855f7",
+            "strokeWidth": 1,
+            "strokeAlpha": 0.15,
+            "paddingY": 6
+          }
+        },
+        "animations": {
+          "idle": [
+            { "property": "alpha", "from": 0.3, "to": 0.9, "durationMs": 2000, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+          ]
+        }
+      },
+      "rowSeparator": {
+        "activeVariant": "subtle",
+        "variants": {
+          "subtle": {
+            "stroke": "#7c3aed",
+            "strokeWidth": 1,
+            "strokeAlpha": 0.1,
+            "paddingX": 6
+          }
+        },
+        "animations": {
+          "idle": [
+            { "property": "alpha", "from": 0.3, "to": 0.8, "durationMs": 2500, "loop": true, "yoyo": true, "ease": "sine.inOut" }
+          ]
+        }
+      },
+      "effect": {
+        "enabled": true,
+        "activeVariant": "purpleGlow",
+        "variants": {
+          "purpleGlow": {
+            "type": "glow",
+            "color": "#a855f7",
+            "alpha": 0.08,
+            "blur": 14
+          }
+        }
+      },
+      "animation": {
+        "enabled": true,
+        "activeVariant": "purplePulse",
+        "variants": {
+          "purplePulse": {
+            "type": "pulse",
+            "color": "#7c3aed",
+            "alpha": 0.2,
+            "durationMs": 3000,
+            "loop": true
+          }
+        }
+      }
+    }
+  }
+}

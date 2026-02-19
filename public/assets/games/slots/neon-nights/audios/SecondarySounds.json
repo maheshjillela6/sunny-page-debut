@@ -1,0 +1,437 @@
+{
+  "urls": [
+    "SecondarySounds.ogg",
+    "SecondarySounds.m4a",
+    "SecondarySounds.mp3",
+    "SecondarySounds.ac3"
+  ],
+  "sprite": {
+    "mx_ambientSoundJP": [
+      0,
+      22384,
+      true
+    ],
+    "mx_freespins_background_sound": [
+      22384,
+      33181,
+      true
+    ],
+    "mx_hns_background_sound": [
+      55565,
+      44893,
+      true
+    ],
+    "sx_AlarmBell": [
+      100458,
+      4112
+    ],
+    "sx_CongratulationCoins": [
+      104570,
+      2736
+    ],
+    "sx_ambientPirate_1": [
+      107306,
+      2730
+    ],
+    "sx_ambientPirate_2": [
+      110036,
+      2000
+    ],
+    "sx_ambientPirate_3": [
+      112036,
+      1370
+    ],
+    "sx_ambientPirate_4": [
+      113406,
+      1370
+    ],
+    "sx_anchorWin": [
+      114776,
+      1677
+    ],
+    "sx_barrelWin": [
+      116453,
+      1294
+    ],
+    "sx_buyBonusClick": [
+      117747,
+      682
+    ],
+    "sx_buyBonusPopup": [
+      118429,
+      1365
+    ],
+    "sx_coinShowerLoop": [
+      119794,
+      2325,
+      true
+    ],
+    "sx_coinValChange": [
+      122119,
+      688
+    ],
+    "sx_congratulations": [
+      122807,
+      3363
+    ],
+    "sx_counter_loop": [
+      126170,
+      126
+    ],
+    "sx_fsWinPopup": [
+      126296,
+      4788
+    ],
+    "sx_gemWin": [
+      131084,
+      2107
+    ],
+    "sx_heartLand_1": [
+      133191,
+      1901
+    ],
+    "sx_heartLand_2": [
+      135092,
+      1919
+    ],
+    "sx_heartLand_3": [
+      137011,
+      1919
+    ],
+    "sx_heartLand_4": [
+      138930,
+      1919
+    ],
+    "sx_heartLand_5": [
+      140849,
+      3843
+    ],
+    "sx_heartWin": [
+      144692,
+      2736
+    ],
+    "sx_hourGlassWin": [
+      147428,
+      1365
+    ],
+    "sx_jackpotActivated": [
+      148793,
+      5467
+    ],
+    "sx_jackpotGrand": [
+      154260,
+      3345
+    ],
+    "sx_jackpotMajor": [
+      157605,
+      3260
+    ],
+    "sx_jackpotMega": [
+      160865,
+      3309
+    ],
+    "sx_jackpotMinor": [
+      164174,
+      3299
+    ],
+    "sx_lineWin": [
+      167473,
+      3413
+    ],
+    "sx_parrotWin": [
+      170886,
+      1684
+    ],
+    "sx_pirateWin": [
+      172570,
+      1767
+    ],
+    "sx_reelExpansion": [
+      174337,
+      10389
+    ],
+    "sx_reelspins_countup": [
+      184726,
+      940
+    ],
+    "sx_returnToNormal": [
+      185666,
+      2048
+    ],
+    "sx_royalWin": [
+      187714,
+      2047
+    ],
+    "sx_scatterAnticipationLose": [
+      189761,
+      2048
+    ],
+    "sx_scatterLand_1": [
+      191809,
+      1000
+    ],
+    "sx_scatterLand_2": [
+      192809,
+      1000
+    ],
+    "sx_scatterLand_3": [
+      193809,
+      1000
+    ],
+    "sx_scatterLand_4": [
+      194809,
+      1000
+    ],
+    "sx_scatterLand_5": [
+      195809,
+      1000
+    ],
+    "sx_scatterWin": [
+      196809,
+      3413
+    ],
+    "sx_symbolLand": [
+      200222,
+      682
+    ],
+    "sx_treasureBoxShake": [
+      200904,
+      1370
+    ],
+    "sx_treasureChestLand": [
+      202274,
+      1303
+    ],
+    "sx_treasureChestLandReveal": [
+      203577,
+      1040
+    ],
+    "sx_wildLand": [
+      204617,
+      1901
+    ],
+    "sx_wildWin": [
+      206518,
+      2048
+    ],
+    "sx_winCollide": [
+      208566,
+      682
+    ],
+    "sx_win_celebration_big_win": [
+      209248,
+      6811
+    ],
+    "sx_win_celebration_mega_win": [
+      216059,
+      5731
+    ],
+    "sx_win_celebration_super_mega_win": [
+      221790,
+      6066
+    ],
+    "sx_wincountup": [
+      227856,
+      117,
+      true
+    ],
+    "sx_wildWin_Low": [
+      227973,
+      1629
+    ],
+    "sx_wildWin_Medium": [
+      229602,
+      2996
+    ],
+    "sx_wildWin_High": [
+      232598,
+      3360
+    ],
+    "sx_royal_win_high": [
+      235958,
+      2000
+    ],
+    "sx_pirateWin_low": [
+      237958,
+      2012
+    ],
+    "sx_pirateWin_medium": [
+      239970,
+      1987
+    ],
+    "sx_pirateWin_high": [
+      241957,
+      2086
+    ],
+    "sx_barrelWin_low": [
+      244043,
+      1309
+    ],
+    "sx_barrelWin_medium": [
+      245352,
+      1842
+    ],
+    "sx_barrelWin_high": [
+      247194,
+      1940
+    ],
+    "sx_royalWin_low": [
+      249134,
+      2000
+    ],
+    "sx_wild_landing": [
+      251134,
+      1901
+    ],
+    "sx_heartLand_1_v2": [
+      253035,
+      500
+    ],
+    "sx_heartLand_2_v2": [
+      253535,
+      500
+    ],
+    "sx_heartLand_3_v2": [
+      254035,
+      500
+    ],
+    "sx_heartLand_4_v2": [
+      254535,
+      500
+    ],
+    "sx_heartLand_5_v2": [
+      255035,
+      1500
+    ],
+    "sx_royalWin_high_v2": [
+      256535,
+      2000
+    ],
+    "sx_anchorWin_low_v1": [
+      258535,
+      1549
+    ],
+    "sx_anchorWin_medium_v1": [
+      260084,
+      2045
+    ],
+    "sx_anchorWin_high_v1": [
+      262129,
+      2084
+    ],
+    "sx_cannonWin_low_v1": [
+      264213,
+      1672
+    ],
+    "sx_cannonWin_medium_v1": [
+      265885,
+      2030
+    ],
+    "sx_cannonWin_high_v1": [
+      267915,
+      2071
+    ],
+    "sx_parrotWin_medium_v4": [
+      269986,
+      1917
+    ],
+    "sx_parrotWin_high_v4": [
+      271903,
+      2003
+    ],
+    "sx_parrot_win_medium_V5": [
+      273906,
+      1917
+    ],
+    "sx_symbol_reveal_sound": [
+      275823,
+      1439
+    ],
+    "sx_buy_feature_acceptance_click_v1": [
+      277262,
+      1037
+    ],
+    "sx_buy_feature_Button": [
+      278299,
+      2000
+    ],
+    "sx_buy_feature_Buy_now_button": [
+      280299,
+      1992
+    ],
+    "sx_buy_feature_close_v1": [
+      282291,
+      930
+    ],
+    "sx_buy_feature_hover_v1": [
+      283221,
+      1037
+    ],
+    "sx_win_countup_termination_v1": [
+      284258,
+      1992
+    ],
+    "sx_win_countup_trigger_v1": [
+      286250,
+      3413,
+      true
+    ],
+    "sx_wild_win_medium_v5": [
+      289663,
+      2048
+    ],
+    "sx_wild_win_high_v5": [
+      291711,
+      2006
+    ],
+    "sx_wild_landing_v2": [
+      293717,
+      1901
+    ],
+    "sx_barrelWin_high_v2": [
+      295618,
+      1908
+    ],
+    "sx_grand_jackpot_win_v2": [
+      297526,
+      3161
+    ],
+    "sx_major_jackpot_win_v2": [
+      300687,
+      3161
+    ],
+    "sx_mega_jackpot_win_v2": [
+      303848,
+      3161
+    ],
+    "sx_minor_jackpot_win_v2": [
+      307009,
+      3161
+    ],
+    "mx_hns_background_sound_v2": [
+      310170,
+      46147,
+      true
+    ],
+    "sx_grand_jackpot_win_v3": [
+      356317,
+      4091
+    ],
+    "sx_major_jackpot_win_v3": [
+      360408,
+      3161
+    ],
+    "sx_mysteryBoxLand": [
+      363569,
+      2261
+    ],
+    "sx_mystery_land": [
+      365830,
+      500
+    ],
+    "sx_mystery_open": [
+      366330,
+      670
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "GRID": {
+    "COLS": 5,
+    "ROWS": 4,
+    "CELL_WIDTH": 120,
+    "CELL_HEIGHT": 120,
+    "SPACING": 8,
+    "SYMBOL_PADDING": 0.9
+  },
+  "SECONDARY_GRID": {
+    "COLS": 2,
+    "ROWS": 4,
+    "CELL_WIDTH": 100,
+    "CELL_HEIGHT": 100,
+    "SPACING": 6,
+    "SYMBOL_PADDING": 0.9
+  }
+}

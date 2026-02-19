@@ -1,0 +1,38 @@
+{
+  "id": "holdRespin",
+  "name": "Hold & Respin",
+  "maxIterations": 50,
+  "initialIterations": 3,
+  "resetCondition": {
+    "type": "symbolLand",
+    "symbol": "BONUS",
+    "resetTo": 3
+  },
+  "completionCondition": {
+    "type": "boardFilled",
+    "fillThreshold": 1.0
+  },
+  "gridOverride": { "rows": 3, "cols": 5 },
+  "baseMultiplier": 1,
+  "multiplierProgression": null,
+  "holdSymbol": "BONUS",
+  "initialRespins": 3,
+  "grandJackpotMultiplier": 10,
+  "symbolValues": [
+    { "value": 1, "weight": 30 },
+    { "value": 2, "weight": 25 },
+    { "value": 3, "weight": 20 },
+    { "value": 5, "weight": 12 },
+    { "value": 10, "weight": 8 },
+    { "value": 25, "weight": 3 },
+    { "value": 50, "weight": 1.5 },
+    { "value": 100, "weight": 0.5 }
+  ],
+  "speedVariants": {
+    "turbo": { "maxIterations": 50, "initialIterations": 3 },
+    "instant": { "maxIterations": 50, "initialIterations": 3 }
+  },
+  "modeOverrides": {
+    "freeSpins": { "grandJackpotMultiplier": 20 }
+  }
+}

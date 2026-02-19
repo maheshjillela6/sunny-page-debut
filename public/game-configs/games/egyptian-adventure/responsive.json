@@ -1,0 +1,124 @@
+{
+  "breakpoints": {
+    "mobile": {
+      "maxWidth": 768,
+      "orientation": "portrait"
+    },
+    "mobileLandscape": {
+      "maxShortSide": 500,
+      "orientation": "landscape"
+    },
+    "tablet": {
+      "minWidth": 769,
+      "maxWidth": 1024
+    },
+    "desktop": {
+      "minWidth": 1025
+    }
+  },
+
+  "layouts": {
+    "desktop": {
+      "virtualWidth": 1280,
+      "virtualHeight": 720,
+      "grid": {
+        "x": 295,
+        "y": 135,
+        "cellWidth": 120,
+        "cellHeight": 120,
+        "spacing": 8
+      },
+      "hud": {
+        "topBar": { "height": 70 },
+        "bottomBar": { "height": 110 }
+      },
+      "scale": {
+        "min": 0.5,
+        "max": 1.0
+      }
+    },
+
+    "tablet": {
+      "virtualWidth": 1024,
+      "virtualHeight": 768,
+      "grid": {
+        "x": 207,
+        "y": 160,
+        "cellWidth": 110,
+        "cellHeight": 110,
+        "spacing": 6
+      },
+      "hud": {
+        "topBar": { "height": 60 },
+        "bottomBar": { "height": 100 }
+      },
+      "scale": {
+        "min": 0.6,
+        "max": 1.0
+      }
+    },
+
+    "mobileLandscape": {
+      "virtualWidth": 1280,
+      "virtualHeight": 720,
+      "grid": {
+        "x": 295,
+        "y": 100,
+        "cellWidth": 110,
+        "cellHeight": 100,
+        "spacing": 6
+      },
+      "hud": {
+        "topBar": { "height": 45 },
+        "bottomBar": { "height": 80 }
+      },
+      "scale": {
+        "min": 0.4,
+        "max": 1.0
+      }
+    },
+
+    "mobile": {
+      "virtualWidth": 720,
+      "virtualHeight": 1280,
+      "grid": {
+        "x": 55,
+        "y": 320,
+        "cellWidth": 115,
+        "cellHeight": 115,
+        "spacing": 5
+      },
+      "hud": {
+        "topBar": { "height": 90 },
+        "bottomBar": { "height": 220 }
+      },
+      "scale": {
+        "min": 0.7,
+        "max": 1.0
+      },
+      "elements": {
+        "spinButton": { "x": 285, "y": 1030, "width": 150, "height": 150 },
+        "balance": { "x": 20, "y": 1170, "width": 200, "height": 70 },
+        "bet": { "x": 500, "y": 1170, "width": 200, "height": 70 }
+      }
+    }
+  },
+
+  "safeArea": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0
+  },
+
+  "letterbox": {
+    "enabled": true,
+    "color": "#1a1a0f"
+  },
+
+  "aspectRatio": {
+    "min": 0.5,
+    "max": 2.0,
+    "preferred": 1.778
+  }
+}

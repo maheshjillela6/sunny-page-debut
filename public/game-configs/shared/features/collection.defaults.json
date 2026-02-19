@@ -1,0 +1,22 @@
+{
+  "id": "collection",
+  "name": "Collection",
+  "maxIterations": 30,
+  "initialIterations": 10,
+  "resetCondition": {
+    "type": "never",
+    "resetTo": 0
+  },
+  "completionCondition": {
+    "type": "iterationsExhausted"
+  },
+  "baseMultiplier": 1,
+  "collectSymbol": "COIN",
+  "collectorSymbol": "COLLECTOR",
+  "autoConsumeOnEnd": true,
+  "consumeThreshold": 0,
+  "speedVariants": {
+    "turbo": { "maxIterations": 30 },
+    "instant": { "maxIterations": 30 }
+  }
+}
